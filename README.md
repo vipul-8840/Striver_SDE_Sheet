@@ -1,27 +1,30 @@
-# Set Matrix Zeroes
+# SDE SHEET
 
-This project contains a C++ implementation of the algorithm to set matrix zeroes. The algorithm modifies a given matrix such that if an element is 0, its entire row and column are set to 0.
+This project contains C++ implementations of various algorithms.
 
-## File Description
+## File Descriptions
 
 - `setMatrixZeroes.cpp`: Contains the implementation of the `setZeroes` function which sets the matrix zeroes.
+- `PascalTriangle.cpp`: Contains the implementation of functions to generate Pascal's Triangle.
 
 ## Compilation and Execution
 
-To compile and run the program, follow these steps:
+To compile and run the programs, follow these steps:
 
 1. Open a terminal or command prompt.
-2. Navigate to the directory containing the `setMatrixZeroes.cpp` file.
-3. Compile the program using a C++ compiler, for example:
+2. Navigate to the directory containing the `.cpp` files.
+3. Compile the programs using a C++ compiler, for example:
     ```sh
     g++ -o setMatrixZeroes setMatrixZeroes.cpp
+    g++ -o PascalTriangle PascalTriangle.cpp
     ```
-4. Run the compiled program:
+4. Run the compiled programs:
     ```sh
     ./setMatrixZeroes
+    ./PascalTriangle
     ```
 
-## Function Description
+## Function Descriptions
 
 ### `void setZeroes(vector<vector<int>>& mat)`
 
@@ -44,3 +47,37 @@ setZeroes(matrix);
 //     {0, 0, 0},
 //     {1, 0, 1}
 // }
+```
+
+### `vector<int> generateRow(int n)`
+
+This function generates a row of Pascal's Triangle using the combination formula.
+
+#### Parameters:
+- `n`: An integer representing the row number.
+
+#### Example:
+```cpp
+vector<int> row = generateRow(5);
+// The row will be: {1, 4, 6, 4, 1}
+```
+
+### `vector<vector<int>> generate(int Rows)`
+
+This function generates Pascal's Triangle up to the given number of rows.
+
+#### Parameters:
+- `Rows`: An integer representing the number of rows.
+
+#### Example:
+```cpp
+vector<vector<int>> triangle = generate(5);
+// The triangle will be:
+// {
+//     {1},
+//     {1, 1},
+//     {1, 2, 1},
+//     {1, 3, 3, 1},
+//     {1, 4, 6, 4, 1}
+// }
+```
