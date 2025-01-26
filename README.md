@@ -7,6 +7,7 @@ This project contains C++ implementations of various algorithms.
 - `setMatrixZeroes.cpp`: Contains the implementation of the `setZeroes` function which sets the matrix zeroes.
 - `PascalTriangle.cpp`: Contains the implementation of functions to generate Pascal's Triangle.
 - `Kadanes.cpp`: Contains the implementation of the `maxSubArray` function which finds the maximum sum of a contiguous subarray.
+- `SortColors.cpp`: Contains the implementation of the `sortColors` function which sorts an array containing 0s, 1s, and 2s.
 
 ## Compilation and Execution
 
@@ -19,12 +20,14 @@ To compile and run the programs, follow these steps:
     g++ -o setMatrixZeroes setMatrixZeroes.cpp
     g++ -o PascalTriangle PascalTriangle.cpp
     g++ -o Kadanes Kadanes.cpp
+    g++ -o SortColors SortColors.cpp
     ```
 4. Run the compiled programs:
     ```sh
     ./setMatrixZeroes
     ./PascalTriangle
     ./Kadanes
+    ./SortColors
     ```
 
 ## Function Descriptions
@@ -97,4 +100,18 @@ This function finds the maximum sum of a contiguous subarray using Kadane's Algo
 vector<int> nums = {-2, 1, -3, 4, -1, 2, 1, -5, 4};
 int max_sum = maxSubArray(nums);
 // The max_sum will be 6 for the subarray [4, -1, 2, 1]
+```
+
+### `void sortColors(vector<int>& nums)`
+
+This function sorts an array containing 0s, 1s, and 2s in-place.
+
+#### Parameters:
+- `nums`: A reference to a vector of integers containing only 0s, 1s, and 2s.
+
+#### Example:
+```cpp
+vector<int> nums = {2, 0, 2, 1, 1, 0};
+sortColors(nums);
+// The nums array will be sorted to: {0, 0, 1, 1, 2, 2}
 ```
