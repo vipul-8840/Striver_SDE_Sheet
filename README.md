@@ -6,6 +6,7 @@ This project contains C++ implementations of various algorithms.
 
 - `setMatrixZeroes.cpp`: Contains the implementation of the `setZeroes` function which sets the matrix zeroes.
 - `PascalTriangle.cpp`: Contains the implementation of functions to generate Pascal's Triangle.
+- `Kadanes.cpp`: Contains the implementation of the `maxSubArray` function which finds the maximum sum of a contiguous subarray.
 
 ## Compilation and Execution
 
@@ -17,11 +18,13 @@ To compile and run the programs, follow these steps:
     ```sh
     g++ -o setMatrixZeroes setMatrixZeroes.cpp
     g++ -o PascalTriangle PascalTriangle.cpp
+    g++ -o Kadanes Kadanes.cpp
     ```
 4. Run the compiled programs:
     ```sh
     ./setMatrixZeroes
     ./PascalTriangle
+    ./Kadanes
     ```
 
 ## Function Descriptions
@@ -80,4 +83,18 @@ vector<vector<int>> triangle = generate(5);
 //     {1, 3, 3, 1},
 //     {1, 4, 6, 4, 1}
 // }
+```
+
+### `int maxSubArray(vector<int>& nums)`
+
+This function finds the maximum sum of a contiguous subarray using Kadane's Algorithm.
+
+#### Parameters:
+- `nums`: A reference to a vector of integers.
+
+#### Example:
+```cpp
+vector<int> nums = {-2, 1, -3, 4, -1, 2, 1, -5, 4};
+int max_sum = maxSubArray(nums);
+// The max_sum will be 6 for the subarray [4, -1, 2, 1]
 ```
