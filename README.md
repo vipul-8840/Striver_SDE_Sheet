@@ -11,6 +11,8 @@ This project contains C++ implementations of various algorithms.
 - `RotateMat.cpp`: Contains the implementation of the `rotate` function which rotates a matrix by 90 degrees.
 - `Duplicate.cpp`: Contains the implementation of the `findDuplicate` function which finds the duplicate number in an array.
 - `MergeInt.cpp`: Contains the implementation of the `merge` function which merges overlapping intervals.
+- `NextPermutation.cpp`: Contains the implementation of the `nextPermutation` function which generates the next lexicographical permutation of an array.
+- `db.json`: Contains mock data for the API.
 
 ## Compilation and Execution
 
@@ -27,6 +29,7 @@ To compile and run the programs, follow these steps:
     g++ -o RotateMat RotateMat.cpp
     g++ -o Duplicate Duplicate.cpp
     g++ -o MergeInt MergeInt.cpp
+    g++ -o NextPermutation NextPermutation.cpp
     ```
 4. Run the compiled programs:
     ```sh
@@ -37,6 +40,7 @@ To compile and run the programs, follow these steps:
     ./RotateMat
     ./Duplicate
     ./MergeInt
+    ./NextPermutation
     ```
 
 ## Function Descriptions
@@ -174,4 +178,18 @@ This function merges overlapping intervals.
 vector<vector<int>> intervals = {{1, 3}, {2, 6}, {8, 10}, {15, 18}};
 vector<vector<int>> merged = merge(intervals);
 // The merged intervals will be: {{1, 6}, {8, 10}, {15, 18}}
+```
+
+### `void nextPermutation(vector<int>& nums)`
+
+This function generates the next lexicographical permutation of an array.
+
+#### Parameters:
+- `nums`: A reference to a vector of integers.
+
+#### Example:
+```cpp
+vector<int> nums = {1, 2, 3};
+nextPermutation(nums);
+// The nums array will be modified to: {1, 3, 2}
 ```
