@@ -12,6 +12,9 @@ This project contains C++ implementations of various algorithms.
 - `Duplicate.cpp`: Contains the implementation of the `findDuplicate` function which finds the duplicate number in an array.
 - `MergeInt.cpp`: Contains the implementation of the `merge` function which merges overlapping intervals.
 - `NextPermutation.cpp`: Contains the implementation of the `nextPermutation` function which generates the next lexicographical permutation of an array.
+- `RepeatMissign.cpp`: Contains the implementation of the function to find the repeating and missing numbers in an array.
+- `MergeSorted.cpp`: Contains the implementation of the `merge` function which merges two sorted arrays.
+- `CountInversion.cpp`: Contains the implementation of the function to count the number of inversions in an array.
 - `db.json`: Contains mock data for the API.
 
 ## Compilation and Execution
@@ -30,6 +33,9 @@ To compile and run the programs, follow these steps:
     g++ -o Duplicate Duplicate.cpp
     g++ -o MergeInt MergeInt.cpp
     g++ -o NextPermutation NextPermutation.cpp
+    g++ -o RepeatMissign RepeatMissign.cpp
+    g++ -o MergeSorted MergeSorted.cpp
+    g++ -o CountInversion CountInversion.cpp
     ```
 4. Run the compiled programs:
     ```sh
@@ -41,6 +47,9 @@ To compile and run the programs, follow these steps:
     ./Duplicate
     ./MergeInt
     ./NextPermutation
+    ./RepeatMissign
+    ./MergeSorted
+    ./CountInversion
     ```
 
 ## Function Descriptions
@@ -192,4 +201,63 @@ This function generates the next lexicographical permutation of an array.
 vector<int> nums = {1, 2, 3};
 nextPermutation(nums);
 // The nums array will be modified to: {1, 3, 2}
+```
+
+### `int main()`
+
+This function finds the repeating and missing numbers in an array.
+
+#### Example:
+```cpp
+int arr[] = {1, 2, 3, 3, 4};
+int n = 5;
+int repeatNo, missingNo;
+int hash[n + 1] = {0};
+for (int i = 0; i < 5; i++) {
+    hash[arr[i]]++;
+}
+for (int i = 1; i < n + 1; i++) {
+    if (hash[i] == 2) {
+        repeatNo = i;
+    }
+    if (hash[i] == 0) {
+        missingNo = i;
+    }
+}
+cout << "Missing Number: " << missingNo << ", Repeating Number: " << repeatNo << endl;
+```
+
+### `void merge(vector<int>& nums1, int m, vector<int>& nums2, int n)`
+
+This function merges two sorted arrays.
+
+#### Parameters:
+- `nums1`: A reference to the first sorted array.
+- `m`: The number of elements in `nums1`.
+- `nums2`: A reference to the second sorted array.
+- `n`: The number of elements in `nums2`.
+
+#### Example:
+```cpp
+vector<int> nums1 = {1, 2, 3, 0, 0, 0};
+vector<int> nums2 = {2, 5, 6};
+merge(nums1, 3, nums2, 3);
+// The nums1 array will be modified to: {1, 2, 2, 3, 5, 6}
+```
+
+### `int main()`
+
+This function counts the number of inversions in an array.
+
+#### Example:
+```cpp
+int arr[] = {3, 2, 1, 4, 6};
+int count = 0;
+for (int i = 0; i < 5; i++) {
+    for (int j = i + 1; j < 5; j++) {
+        if (arr[i] > arr[j])
+            count++;
+    }
+}
+cout << "No of Inversion " << count << " ";
 ```
