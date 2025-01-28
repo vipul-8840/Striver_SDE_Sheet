@@ -15,6 +15,7 @@ This project contains C++ implementations of various algorithms.
 - `RepeatMissign.cpp`: Contains the implementation of the function to find the repeating and missing numbers in an array.
 - `MergeSorted.cpp`: Contains the implementation of the `merge` function which merges two sorted arrays.
 - `CountInversion.cpp`: Contains the implementation of the function to count the number of inversions in an array.
+- `MojorEl.cpp`: Contains the implementation of the `majorityElement` function which finds the majority element in an array.
 - `db.json`: Contains mock data for the API.
 
 ## Compilation and Execution
@@ -36,6 +37,7 @@ To compile and run the programs, follow these steps:
     g++ -o RepeatMissign RepeatMissign.cpp
     g++ -o MergeSorted MergeSorted.cpp
     g++ -o CountInversion CountInversion.cpp
+    g++ -o MojorEl MojorEl.cpp
     ```
 4. Run the compiled programs:
     ```sh
@@ -50,6 +52,7 @@ To compile and run the programs, follow these steps:
     ./RepeatMissign
     ./MergeSorted
     ./CountInversion
+    ./MojorEl
     ```
 
 ## Function Descriptions
@@ -260,4 +263,18 @@ for (int i = 0; i < 5; i++) {
     }
 }
 cout << "No of Inversion " << count << " ";
+```
+
+### `int majorityElement(vector<int>& nums)`
+
+This function finds the majority element in an array.
+
+#### Parameters:
+- `nums`: A reference to a vector of integers.
+
+#### Example:
+```cpp
+vector<int> nums = {3, 2, 3};
+int majority = majorityElement(nums);
+// The majority element will be 3
 ```
