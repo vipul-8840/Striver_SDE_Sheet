@@ -16,6 +16,10 @@ This project contains C++ implementations of various algorithms.
 - `MergeSorted.cpp`: Contains the implementation of the `merge` function which merges two sorted arrays.
 - `CountInversion.cpp`: Contains the implementation of the function to count the number of inversions in an array.
 - `MojorEl.cpp`: Contains the implementation of the `majorityElement` function which finds the majority element in an array.
+- `Search_In_2D.cpp`: Contains the implementation of the `searchMatrix` function which searches for a target value in a 2D matrix.
+- `ReversePairs.cpp`: Contains the implementation of the `reversePairs` function which counts the number of reverse pairs in an array.
+- `Pow.cpp`: Contains the implementation of the `myPow` function which calculates the power of a number.
+- `Maj_El.cpp`: Contains the implementation of the `majorityElement` function which finds all elements that appear more than n/3 times in an array.
 - `db.json`: Contains mock data for the API.
 
 ## Compilation and Execution
@@ -38,6 +42,10 @@ To compile and run the programs, follow these steps:
     g++ -o MergeSorted MergeSorted.cpp
     g++ -o CountInversion CountInversion.cpp
     g++ -o MojorEl MojorEl.cpp
+    g++ -o Search_In_2D Search_In_2D.cpp
+    g++ -o ReversePairs ReversePairs.cpp
+    g++ -o Pow Pow.cpp
+    g++ -o Maj_El Maj_El.cpp
     ```
 4. Run the compiled programs:
     ```sh
@@ -53,6 +61,10 @@ To compile and run the programs, follow these steps:
     ./MergeSorted
     ./CountInversion
     ./MojorEl
+    ./Search_In_2D
+    ./ReversePairs
+    ./Pow
+    ./Maj_El
     ```
 
 ## Function Descriptions
@@ -277,4 +289,65 @@ This function finds the majority element in an array.
 vector<int> nums = {3, 2, 3};
 int majority = majorityElement(nums);
 // The majority element will be 3
+```
+
+### `bool searchMatrix(vector<vector<int>>& mat, int target)`
+
+This function searches for a target value in a 2D matrix.
+
+#### Parameters:
+- `mat`: A reference to a 2D vector of integers representing the matrix.
+- `target`: An integer representing the target value to search for.
+
+#### Example:
+```cpp
+vector<vector<int>> mat = {
+    {1, 3, 5, 7},
+    {10, 11, 16, 20},
+    {23, 30, 34, 60}
+};
+bool found = searchMatrix(mat, 3);
+// The found will be true
+```
+
+### `int reversePairs(vector<int>& nums)`
+
+This function counts the number of reverse pairs in an array.
+
+#### Parameters:
+- `nums`: A reference to a vector of integers.
+
+#### Example:
+```cpp
+vector<int> nums = {1, 3, 2, 3, 1};
+int count = reversePairs(nums);
+// The count will be 2
+```
+
+### `double myPow(double x, int n)`
+
+This function calculates the power of a number.
+
+#### Parameters:
+- `x`: A double representing the base.
+- `n`: An integer representing the exponent.
+
+#### Example:
+```cpp
+double result = myPow(2.0, 10);
+// The result will be 1024.0
+```
+
+### `vector<int> majorityElement(vector<int>& nums)`
+
+This function finds all elements that appear more than n/3 times in an array.
+
+#### Parameters:
+- `nums`: A reference to a vector of integers.
+
+#### Example:
+```cpp
+vector<int> nums = {3, 2, 3};
+vector<int> result = majorityElement(nums);
+// The result will be {3}
 ```
