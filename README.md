@@ -20,6 +20,8 @@ This project contains C++ implementations of various algorithms.
 - `ReversePairs.cpp`: Contains the implementation of the `reversePairs` function which counts the number of reverse pairs in an array.
 - `Pow.cpp`: Contains the implementation of the `myPow` function which calculates the power of a number.
 - `Maj_El.cpp`: Contains the implementation of the `majorityElement` function which finds all elements that appear more than n/3 times in an array.
+- `UniquePaths.cpp`: Contains the implementation of the `uniquePaths` function which calculates the number of unique paths in a grid.
+- `TwoSum.cpp`: Contains the implementation of the `twoSum` function which finds two numbers in an array that add up to a target value.
 - `db.json`: Contains mock data for the API.
 
 ## Compilation and Execution
@@ -46,6 +48,8 @@ To compile and run the programs, follow these steps:
     g++ -o ReversePairs ReversePairs.cpp
     g++ -o Pow Pow.cpp
     g++ -o Maj_El Maj_El.cpp
+    g++ -o UniquePaths UniquePaths.cpp
+    g++ -o TwoSum TwoSum.cpp
     ```
 4. Run the compiled programs:
     ```sh
@@ -65,6 +69,8 @@ To compile and run the programs, follow these steps:
     ./ReversePairs
     ./Pow
     ./Maj_El
+    ./UniquePaths
+    ./TwoSum
     ```
 
 ## Function Descriptions
@@ -350,4 +356,34 @@ This function finds all elements that appear more than n/3 times in an array.
 vector<int> nums = {3, 2, 3};
 vector<int> result = majorityElement(nums);
 // The result will be {3}
+```
+
+### `int uniquePaths(int m, int n)`
+
+This function calculates the number of unique paths in a grid.
+
+#### Parameters:
+- `m`: An integer representing the number of rows.
+- `n`: An integer representing the number of columns.
+
+#### Example:
+```cpp
+int paths = uniquePaths(3, 7);
+// The number of unique paths will be 28
+```
+
+### `vector<int> twoSum(vector<int>& nums, int target)`
+
+This function finds two numbers in an array that add up to a target value.
+
+#### Parameters:
+- `nums`: A reference to a vector of integers.
+- `target`: An integer representing the target value.
+
+#### Example:
+```cpp
+vector<int> nums = {2, 7, 11, 15};
+int target = 9;
+vector<int> result = twoSum(nums, target);
+// The result will be {0, 1}
 ```
