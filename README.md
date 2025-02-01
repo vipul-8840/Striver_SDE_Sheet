@@ -22,6 +22,7 @@ This project contains C++ implementations of various algorithms.
 - `Maj_El.cpp`: Contains the implementation of the `majorityElement` function which finds all elements that appear more than n/3 times in an array.
 - `UniquePaths.cpp`: Contains the implementation of the `uniquePaths` function which calculates the number of unique paths in a grid.
 - `TwoSum.cpp`: Contains the implementation of the `twoSum` function which finds two numbers in an array that add up to a target value.
+- `LargetSubarray.cpp`: Contains the implementation of the `maxLen` function which finds the length of the largest subarray with sum 0.
 - `db.json`: Contains mock data for the API.
 
 ## Compilation and Execution
@@ -50,6 +51,7 @@ To compile and run the programs, follow these steps:
     g++ -o Maj_El Maj_El.cpp
     g++ -o UniquePaths UniquePaths.cpp
     g++ -o TwoSum TwoSum.cpp
+    g++ -o LargetSubarray LargetSubarray.cpp
     ```
 4. Run the compiled programs:
     ```sh
@@ -71,6 +73,7 @@ To compile and run the programs, follow these steps:
     ./Maj_El
     ./UniquePaths
     ./TwoSum
+    ./LargetSubarray
     ```
 
 ## Function Descriptions
@@ -386,4 +389,18 @@ vector<int> nums = {2, 7, 11, 15};
 int target = 9;
 vector<int> result = twoSum(nums, target);
 // The result will be {0, 1}
+```
+
+### `int maxLen(vector<int>& arr)`
+
+This function finds the length of the largest subarray with sum 0.
+
+#### Parameters:
+- `arr`: A reference to a vector of integers.
+
+#### Example:
+```cpp
+vector<int> arr = {1, -1, 3, 2, -2, -3, 3};
+int length = maxLen(arr);
+// The length will be 5 for the subarray [1, -1, 3, 2, -2]
 ```
