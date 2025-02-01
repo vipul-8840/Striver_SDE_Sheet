@@ -23,6 +23,7 @@ This project contains C++ implementations of various algorithms.
 - `UniquePaths.cpp`: Contains the implementation of the `uniquePaths` function which calculates the number of unique paths in a grid.
 - `TwoSum.cpp`: Contains the implementation of the `twoSum` function which finds two numbers in an array that add up to a target value.
 - `LargetSubarray.cpp`: Contains the implementation of the `maxLen` function which finds the length of the largest subarray with sum 0.
+- `fourSum.cpp`: Contains the implementation of the `fourSum` function which finds all unique quadruplets in an array that add up to a target value.
 - `db.json`: Contains mock data for the API.
 
 ## Compilation and Execution
@@ -52,6 +53,7 @@ To compile and run the programs, follow these steps:
     g++ -o UniquePaths UniquePaths.cpp
     g++ -o TwoSum TwoSum.cpp
     g++ -o LargetSubarray LargetSubarray.cpp
+    g++ -o fourSum fourSum.cpp
     ```
 4. Run the compiled programs:
     ```sh
@@ -74,6 +76,7 @@ To compile and run the programs, follow these steps:
     ./UniquePaths
     ./TwoSum
     ./LargetSubarray
+    ./fourSum
     ```
 
 ## Function Descriptions
@@ -403,4 +406,20 @@ This function finds the length of the largest subarray with sum 0.
 vector<int> arr = {1, -1, 3, 2, -2, -3, 3};
 int length = maxLen(arr);
 // The length will be 5 for the subarray [1, -1, 3, 2, -2]
+```
+
+### `vector<vector<int>> fourSum(vector<int>& nums, int target)`
+
+This function finds all unique quadruplets in an array that add up to a target value.
+
+#### Parameters:
+- `nums`: A reference to a vector of integers.
+- `target`: An integer representing the target value.
+
+#### Example:
+```cpp
+vector<int> nums = {1, 0, -1, 0, -2, 2};
+int target = 0;
+vector<vector<int>> result = fourSum(nums, target);
+// The result will be {{-2, -1, 1, 2}, {-2, 0, 0, 2}, {-1, 0, 0, 1}}
 ```
