@@ -27,6 +27,10 @@ This project contains C++ implementations of various algorithms.
 - `LongSubWithout.cpp`: Contains the implementation of the `lengthOfLongestSubstring` function which finds the length of the longest substring without repeating characters.
 - `LongestConsSeq.cpp`: Contains the implementation of the `longestConsecutive` function which finds the length of the longest consecutive sequence in an array.
 - `CountXor.cpp`: Contains the implementation of the function to count the number of subarrays with a given XOR.
+- `RevLinkList.cpp`: Contains the implementation of the `reverseList` function which reverses a linked list.
+- `RemoveNLL.cpp`: Contains the implementation of the `removeNthFromEnd` function which removes the nth node from the end of a linked list.
+- `MiddleLL.cpp`: Contains the implementation of the `middleNode` function which finds the middle node of a linked list.
+- `MergeTwoSortLL.cpp`: Contains the implementation of the `mergeTwoLists` function which merges two sorted linked lists.
 - `db.json`: Contains mock data for the API.
 
 ## Compilation and Execution
@@ -60,6 +64,10 @@ To compile and run the programs, follow these steps:
     g++ -o LongSubWithout LongSubWithout.cpp
     g++ -o LongestConsSeq LongestConsSeq.cpp
     g++ -o CountXor CountXor.cpp
+    g++ -o RevLinkList RevLinkList.cpp
+    g++ -o RemoveNLL RemoveNLL.cpp
+    g++ -o MiddleLL MiddleLL.cpp
+    g++ -o MergeTwoSortLL MergeTwoSortLL.cpp
     ```
 4. Run the compiled programs:
     ```sh
@@ -86,6 +94,10 @@ To compile and run the programs, follow these steps:
     ./LongSubWithout
     ./LongestConsSeq
     ./CountXor
+    ./RevLinkList
+    ./RemoveNLL
+    ./MiddleLL
+    ./MergeTwoSortLL
     ```
 
 ## Function Descriptions
@@ -205,7 +217,7 @@ This function finds the duplicate number in an array.
 - `nums`: A reference to a vector of integers.
 
 #### Example:
-```cpps
+```cpp
 vector<int> nums = {1, 3, 4, 2, 2};
 int duplicate = findDuplicate(nums);
 // The duplicate will be 2
@@ -481,3 +493,14 @@ for (int i = 0; i < v.size(); i++) {
 cout << count << endl;
 // The count will be 4
 ```
+
+### `ListNode* reverseList(ListNode* head)`
+
+This function reverses a linked list.
+
+#### Parameters:
+- `head`: A pointer to the head of the linked list.
+
+#### Example:
+```cpp
+ListNode* head
