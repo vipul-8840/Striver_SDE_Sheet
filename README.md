@@ -24,6 +24,9 @@ This project contains C++ implementations of various algorithms.
 - `TwoSum.cpp`: Contains the implementation of the `twoSum` function which finds two numbers in an array that add up to a target value.
 - `LargetSubarray.cpp`: Contains the implementation of the `maxLen` function which finds the length of the largest subarray with sum 0.
 - `fourSum.cpp`: Contains the implementation of the `fourSum` function which finds all unique quadruplets in an array that add up to a target value.
+- `LongSubWithout.cpp`: Contains the implementation of the `lengthOfLongestSubstring` function which finds the length of the longest substring without repeating characters.
+- `LongestConsSeq.cpp`: Contains the implementation of the `longestConsecutive` function which finds the length of the longest consecutive sequence in an array.
+- `CountXor.cpp`: Contains the implementation of the function to count the number of subarrays with a given XOR.
 - `db.json`: Contains mock data for the API.
 
 ## Compilation and Execution
@@ -54,6 +57,9 @@ To compile and run the programs, follow these steps:
     g++ -o TwoSum TwoSum.cpp
     g++ -o LargetSubarray LargetSubarray.cpp
     g++ -o fourSum fourSum.cpp
+    g++ -o LongSubWithout LongSubWithout.cpp
+    g++ -o LongestConsSeq LongestConsSeq.cpp
+    g++ -o CountXor CountXor.cpp
     ```
 4. Run the compiled programs:
     ```sh
@@ -77,6 +83,9 @@ To compile and run the programs, follow these steps:
     ./TwoSum
     ./LargetSubarray
     ./fourSum
+    ./LongSubWithout
+    ./LongestConsSeq
+    ./CountXor
     ```
 
 ## Function Descriptions
@@ -196,7 +205,7 @@ This function finds the duplicate number in an array.
 - `nums`: A reference to a vector of integers.
 
 #### Example:
-```cpp
+```cpps
 vector<int> nums = {1, 3, 4, 2, 2};
 int duplicate = findDuplicate(nums);
 // The duplicate will be 2
@@ -422,4 +431,53 @@ vector<int> nums = {1, 0, -1, 0, -2, 2};
 int target = 0;
 vector<vector<int>> result = fourSum(nums, target);
 // The result will be {{-2, -1, 1, 2}, {-2, 0, 0, 2}, {-1, 0, 0, 1}}
+```
+
+### `int lengthOfLongestSubstring(string s)`
+
+This function finds the length of the longest substring without repeating characters.
+
+#### Parameters:
+- `s`: A string representing the input string.
+
+#### Example:
+```cpp
+string s = "abcabcbb";
+int length = lengthOfLongestSubstring(s);
+// The length will be 3 for the substring "abc"
+```
+
+### `int longestConsecutive(vector<int>& nums)`
+
+This function finds the length of the longest consecutive sequence in an array.
+
+#### Parameters:
+- `nums`: A reference to a vector of integers.
+
+#### Example:
+```cpp
+vector<int> nums = {100, 4, 200, 1, 3, 2};
+int length = longestConsecutive(nums);
+// The length will be 4 for the sequence [1, 2, 3, 4]
+```
+
+### `int main()`
+
+This function counts the number of subarrays with a given XOR.
+
+#### Example:
+```cpp
+int k = 6;
+vector<int> v = {4, 2, 2, 6, 4};
+int xors = 0, count = 0;
+unordered_map<int, int> m;
+m[xors]++;
+for (int i = 0; i < v.size(); i++) {
+    xors = xors ^ v[i];
+    int x = xors ^ k;
+    count += m[x];
+    m[xors]++;
+}
+cout << count << endl;
+// The count will be 4
 ```
