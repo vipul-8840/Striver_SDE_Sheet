@@ -34,7 +34,7 @@ This project contains C++ implementations of various algorithms.
 - `KRevLL.cpp`: Contains the implementation of the `reverseKGroup` function which reverses nodes of a linked list in k-group.
 - `DelNodeLL.cpp`: Contains the implementation of the `deleteNode` function which deletes a node in a linked list.
 - `AddTwoNumLL.cpp`: Contains the implementation of the `addTwoNumbers` function which adds two numbers represented by linked lists.
-- `db.json`: Contains mock data for the API.
+- palindrome linked list : contains the implementation of the " palindrome a ll" function which finding palindrome exist.
 
 ## Compilation and Execution
 
