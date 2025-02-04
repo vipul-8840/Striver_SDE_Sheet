@@ -31,6 +31,9 @@ This project contains C++ implementations of various algorithms.
 - `RemoveNLL.cpp`: Contains the implementation of the `removeNthFromEnd` function which removes the nth node from the end of a linked list.
 - `MiddleLL.cpp`: Contains the implementation of the `middleNode` function which finds the middle node of a linked list.
 - `MergeTwoSortLL.cpp`: Contains the implementation of the `mergeTwoLists` function which merges two sorted linked lists.
+- `KRevLL.cpp`: Contains the implementation of the `reverseKGroup` function which reverses nodes of a linked list in k-group.
+- `DelNodeLL.cpp`: Contains the implementation of the `deleteNode` function which deletes a node in a linked list.
+- `AddTwoNumLL.cpp`: Contains the implementation of the `addTwoNumbers` function which adds two numbers represented by linked lists.
 - `db.json`: Contains mock data for the API.
 
 ## Compilation and Execution
@@ -68,6 +71,9 @@ To compile and run the programs, follow these steps:
     g++ -o RemoveNLL RemoveNLL.cpp
     g++ -o MiddleLL MiddleLL.cpp
     g++ -o MergeTwoSortLL MergeTwoSortLL.cpp
+    g++ -o KRevLL KRevLL.cpp
+    g++ -o DelNodeLL DelNodeLL.cpp
+    g++ -o AddTwoNumLL AddTwoNumLL.cpp
     ```
 4. Run the compiled programs:
     ```sh
@@ -98,6 +104,9 @@ To compile and run the programs, follow these steps:
     ./RemoveNLL
     ./MiddleLL
     ./MergeTwoSortLL
+    ./KRevLL
+    ./DelNodeLL
+    ./AddTwoNumLL
     ```
 
 ## Function Descriptions
@@ -503,4 +512,99 @@ This function reverses a linked list.
 
 #### Example:
 ```cpp
-ListNode* head
+ListNode* head = ...; // Initialize the linked list
+ListNode* newHead = reverseList(head);
+// The linked list will be reversed
+```
+
+### `ListNode* removeNthFromEnd(ListNode* head, int n)`
+
+This function removes the nth node from the end of a linked list.
+
+#### Parameters:
+- `head`: A pointer to the head of the linked list.
+- `n`: An integer representing the position from the end.
+
+#### Example:
+```cpp
+ListNode* head = ...; // Initialize the linked list
+int n = 2;
+ListNode* newHead = removeNthFromEnd(head, n);
+// The nth node from the end will be removed
+```
+
+### `ListNode* middleNode(ListNode* head)`
+
+This function finds the middle node of a linked list.
+
+#### Parameters:
+- `head`: A pointer to the head of the linked list.
+
+#### Example:
+```cpp
+ListNode* head = ...; // Initialize the linked list
+ListNode* middle = middleNode(head);
+// The middle node will be found
+```
+
+### `ListNode* mergeTwoLists(ListNode* l1, ListNode* l2)`
+
+This function merges two sorted linked lists.
+
+#### Parameters:
+- `l1`: A pointer to the head of the first sorted linked list.
+- `l2`: A pointer to the head of the second sorted linked list.
+
+#### Example:
+```cpp
+ListNode* l1 = ...; // Initialize the first sorted linked list
+ListNode* l2 = ...; // Initialize the second sorted linked list
+ListNode* merged = mergeTwoLists(l1, l2);
+// The two sorted linked lists will be merged
+```
+
+### `ListNode* reverseKGroup(ListNode* head, int k)`
+
+This function reverses nodes of a linked list in k-group.
+
+#### Parameters:
+- `head`: A pointer to the head of the linked list.
+- `k`: An integer representing the group size.
+
+#### Example:
+```cpp
+ListNode* head = ...; // Initialize the linked list
+int k = 2;
+ListNode* newHead = reverseKGroup(head, k);
+// The nodes will be reversed in k-group
+```
+
+### `void deleteNode(ListNode* node)`
+
+This function deletes a node in a linked list.
+
+#### Parameters:
+- `node`: A pointer to the node to be deleted.
+
+#### Example:
+```cpp
+ListNode* node = ...; // Initialize the node to be deleted
+deleteNode(node);
+// The node will be deleted
+```
+
+### `ListNode* addTwoNumbers(ListNode* l1, ListNode* l2)`
+
+This function adds two numbers represented by linked lists.
+
+#### Parameters:
+- `l1`: A pointer to the head of the first linked list.
+- `l2`: A pointer to the head of the second linked list.
+
+#### Example:
+```cpp
+ListNode* l1 = ...; // Initialize the first linked list
+ListNode* l2 = ...; // Initialize the second linked list
+ListNode* result = addTwoNumbers(l1, l2);
+// The two numbers will be added
+```
