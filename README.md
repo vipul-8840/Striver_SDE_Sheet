@@ -34,7 +34,10 @@ This project contains C++ implementations of various algorithms.
 - `KRevLL.cpp`: Contains the implementation of the `reverseKGroup` function which reverses nodes of a linked list in k-group.
 - `DelNodeLL.cpp`: Contains the implementation of the `deleteNode` function which deletes a node in a linked list.
 - `AddTwoNumLL.cpp`: Contains the implementation of the `addTwoNumbers` function which adds two numbers represented by linked lists.
-- palindrome linked list : contains the implementation of the " palindrome a ll" function which finding palindrome exist.
+- `PalindromeLL.cpp`: Contains the implementation of the `isPalindrome` function which checks if a linked list is a palindrome.
+- `StartingPointCycle.cpp`: Contains the implementation of the `detectCycle` function which finds the starting point of a cycle in a linked list.
+- `CycleLL.cpp`: Contains the implementation of the `hasCycle` function which checks if a linked list has a cycle.
+- `db.json`: Contains mock data for the API.
 
 ## Compilation and Execution
 
@@ -74,6 +77,9 @@ To compile and run the programs, follow these steps:
     g++ -o KRevLL KRevLL.cpp
     g++ -o DelNodeLL DelNodeLL.cpp
     g++ -o AddTwoNumLL AddTwoNumLL.cpp
+    g++ -o PalindromeLL PalindromeLL.cpp
+    g++ -o StartingPointCycle StartingPointCycle.cpp
+    g++ -o CycleLL CycleLL.cpp
     ```
 4. Run the compiled programs:
     ```sh
@@ -107,6 +113,9 @@ To compile and run the programs, follow these steps:
     ./KRevLL
     ./DelNodeLL
     ./AddTwoNumLL
+    ./PalindromeLL
+    ./StartingPointCycle
+    ./CycleLL
     ```
 
 ## Function Descriptions
