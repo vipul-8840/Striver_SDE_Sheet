@@ -28,9 +28,83 @@ This project contains C++ implementations of various algorithms.
 - `LongestConsSeq.cpp`: Contains the implementation of the `longestConsecutive` function which finds the length of the longest consecutive sequence in an array.
 - `CountXor.cpp`: Contains the implementation of the function to count the number of subarrays with a given XOR.
 - `PalindromeLL.cpp`: Contains the implementation of the `isPalindrome` function which checks if a linked list is a palindrome.
+- `MaxConsOnes.cpp`: Contains the implementation of the `findMaxConsecutiveOnes` function which finds the maximum number of consecutive 1s in an array.
+- `threeSum.cpp`: Contains the implementation of the `threeSum` function which finds all unique triplets in an array that add up to zero.
+- `KRevLL.cpp`: Contains the implementation of the `reverseKGroup` function which reverses nodes in k-group in a linked list.
+- `CycleLL.cpp`: Contains the implementation of the `hasCycle` function which detects a cycle in a linked list.
+- `AddTwoNumLL.cpp`: Contains the implementation of the `addTwoNumbers` function which adds two numbers represented by linked lists.
+- `db.json`: Contains mock data for the API.
 
+## Compilation and Execution
 
+To compile and run the programs, follow these steps:
 
+1. Open a terminal or command prompt.
+2. Navigate to the directory containing the `.cpp` files.
+3. Compile the programs using a C++ compiler, for example:
+    ```sh
+    g++ -o setMatrixZeroes setMatrixZeroes.cpp
+    g++ -o PascalTriangle PascalTriangle.cpp
+    g++ -o Kadanes Kadanes.cpp
+    g++ -o SortColors SortColors.cpp
+    g++ -o RotateMat RotateMat.cpp
+    g++ -o Duplicate Duplicate.cpp
+    g++ -o MergeInt MergeInt.cpp
+    g++ -o NextPermutation NextPermutation.cpp
+    g++ -o RepeatMissign RepeatMissign.cpp
+    g++ -o MergeSorted MergeSorted.cpp
+    g++ -o CountInversion CountInversion.cpp
+    g++ -o MojorEl MojorEl.cpp
+    g++ -o Search_In_2D Search_In_2D.cpp
+    g++ -o ReversePairs ReversePairs.cpp
+    g++ -o Pow Pow.cpp
+    g++ -o Maj_El Maj_El.cpp
+    g++ -o UniquePaths UniquePaths.cpp
+    g++ -o TwoSum TwoSum.cpp
+    g++ -o LargetSubarray LargetSubarray.cpp
+    g++ -o fourSum fourSum.cpp
+    g++ -o LongSubWithout LongSubWithout.cpp
+    g++ -o LongestConsSeq LongestConsSeq.cpp
+    g++ -o CountXor CountXor.cpp
+    g++ -o PalindromeLL PalindromeLL.cpp
+    g++ -o MaxConsOnes MaxConsOnes.cpp
+    g++ -o threeSum threeSum.cpp
+    g++ -o KRevLL KRevLL.cpp
+    g++ -o CycleLL CycleLL.cpp
+    g++ -o AddTwoNumLL AddTwoNumLL.cpp
+    ```
+4. Run the compiled programs:
+    ```sh
+    ./setMatrixZeroes
+    ./PascalTriangle
+    ./Kadanes
+    ./SortColors
+    ./RotateMat
+    ./Duplicate
+    ./MergeInt
+    ./NextPermutation
+    ./RepeatMissign
+    ./MergeSorted
+    ./CountInversion
+    ./MojorEl
+    ./Search_In_2D
+    ./ReversePairs
+    ./Pow
+    ./Maj_El
+    ./UniquePaths
+    ./TwoSum
+    ./LargetSubarray
+    ./fourSum
+    ./LongSubWithout
+    ./LongestConsSeq
+    ./CountXor
+    ./PalindromeLL
+    ./MaxConsOnes
+    ./threeSum
+    ./KRevLL
+    ./CycleLL
+    ./AddTwoNumLL
+    ```
 
 ## Function Descriptions
 
@@ -284,4 +358,158 @@ This function counts the number of reverse pairs in an array.
 
 #### Example:
 ```cpp
-vector<int
+vector<int> nums = {1, 3, 2, 3, 1};
+int count = reversePairs(nums);
+// The count will be 2
+```
+
+### `double myPow(double x, int n)`
+
+This function calculates the power of a number.
+
+#### Parameters:
+- `x`: A double representing the base.
+- `n`: An integer representing the exponent.
+
+#### Example:
+```cpp
+double result = myPow(2.0, 10);
+// The result will be 1024.0
+```
+
+### `vector<int> majorityElement(vector<int>& nums)`
+
+This function finds all elements that appear more than n/3 times in an array.
+
+#### Parameters:
+- `nums`: A reference to a vector of integers.
+
+#### Example:
+```cpp
+vector<int> nums = {3, 2, 3};
+vector<int> result = majorityElement(nums);
+// The result will be {3}
+```
+
+### `int uniquePaths(int m, int n)`
+
+This function calculates the number of unique paths in a grid.
+
+#### Parameters:
+- `m`: An integer representing the number of rows.
+- `n`: An integer representing the number of columns.
+
+#### Example:
+```cpp
+int paths = uniquePaths(3, 7);
+// The number of unique paths will be 28
+```
+
+### `vector<int> twoSum(vector<int>& nums, int target)`
+
+This function finds two numbers in an array that add up to a target value.
+
+#### Parameters:
+- `nums`: A reference to a vector of integers.
+- `target`: An integer representing the target value.
+
+#### Example:
+```cpp
+vector<int> nums = {2, 7, 11, 15};
+int target = 9;
+vector<int> result = twoSum(nums, target);
+// The result will be {0, 1}
+```
+
+### `int maxLen(vector<int>& arr)`
+
+This function finds the length of the largest subarray with sum 0.
+
+#### Parameters:
+- `arr`: A reference to a vector of integers.
+
+#### Example:
+```cpp
+vector<int> arr = {1, -1, 3, 2, -2, -3, 3};
+int length = maxLen(arr);
+// The length will be 5 for the subarray [1, -1, 3, 2, -2]
+```
+
+### `vector<vector<int>> fourSum(vector<int>& nums, int target)`
+
+This function finds all unique quadruplets in an array that add up to a target value.
+
+#### Parameters:
+- `nums`: A reference to a vector of integers.
+- `target`: An integer representing the target value.
+
+#### Example:
+```cpp
+vector<int> nums = {1, 0, -1, 0, -2, 2};
+int target = 0;
+vector<vector<int>> result = fourSum(nums, target);
+// The result will be {{-2, -1, 1, 2}, {-2, 0, 0, 2}, {-1, 0, 0, 1}}
+```
+
+### `int lengthOfLongestSubstring(string s)`
+
+This function finds the length of the longest substring without repeating characters.
+
+#### Parameters:
+- `s`: A string representing the input string.
+
+#### Example:
+```cpp
+string s = "abcabcbb";
+int length = lengthOfLongestSubstring(s);
+// The length will be 3 for the substring "abc"
+```
+
+### `int longestConsecutive(vector<int>& nums)`
+
+This function finds the length of the longest consecutive sequence in an array.
+
+#### Parameters:
+- `nums`: A reference to a vector of integers.
+
+#### Example:
+```cpp
+vector<int> nums = {100, 4, 200, 1, 3, 2};
+int length = longestConsecutive(nums);
+// The length will be 4 for the sequence [1, 2, 3, 4]
+```
+
+### `int main()`
+
+This function counts the number of subarrays with a given XOR.
+
+#### Example:
+```cpp
+int k = 6;
+vector<int> v = {4, 2, 2, 6, 4};
+int xors = 0, count = 0;
+unordered_map<int, int> m;
+m[xors]++;
+for (int i = 0; i < v.size(); i++) {
+    xors = xors ^ v[i];
+    int x = xors ^ k;
+    count += m[x];
+    m[xors]++;
+}
+cout << count << endl;
+// The count will be 4
+```
+
+### `bool isPalindrome(ListNode* head)`
+
+This function checks if a linked list is a palindrome.
+
+#### Parameters:
+- `head`: A pointer to the head of the linked list.
+
+#### Example:
+```cpp
+ListNode* head = new ListNode(1);
+head->next = new ListNode(2);
+head->next->next = new ListNode(2);
+head->next->
