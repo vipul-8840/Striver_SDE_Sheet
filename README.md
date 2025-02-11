@@ -33,78 +33,8 @@ This project contains C++ implementations of various algorithms.
 - `KRevLL.cpp`: Contains the implementation of the `reverseKGroup` function which reverses nodes in k-group in a linked list.
 - `CycleLL.cpp`: Contains the implementation of the `hasCycle` function which detects a cycle in a linked list.
 - `AddTwoNumLL.cpp`: Contains the implementation of the `addTwoNumbers` function which adds two numbers represented by linked lists.
-- `db.json`: Contains mock data for the API.
+- `RotateLL.cpp`: Contains the implementation of the `rotateRight` function which rotates a linked list to the right by k places.
 
-## Compilation and Execution
-
-To compile and run the programs, follow these steps:
-
-1. Open a terminal or command prompt.
-2. Navigate to the directory containing the `.cpp` files.
-3. Compile the programs using a C++ compiler, for example:
-    ```sh
-    g++ -o setMatrixZeroes setMatrixZeroes.cpp
-    g++ -o PascalTriangle PascalTriangle.cpp
-    g++ -o Kadanes Kadanes.cpp
-    g++ -o SortColors SortColors.cpp
-    g++ -o RotateMat RotateMat.cpp
-    g++ -o Duplicate Duplicate.cpp
-    g++ -o MergeInt MergeInt.cpp
-    g++ -o NextPermutation NextPermutation.cpp
-    g++ -o RepeatMissign RepeatMissign.cpp
-    g++ -o MergeSorted MergeSorted.cpp
-    g++ -o CountInversion CountInversion.cpp
-    g++ -o MojorEl MojorEl.cpp
-    g++ -o Search_In_2D Search_In_2D.cpp
-    g++ -o ReversePairs ReversePairs.cpp
-    g++ -o Pow Pow.cpp
-    g++ -o Maj_El Maj_El.cpp
-    g++ -o UniquePaths UniquePaths.cpp
-    g++ -o TwoSum TwoSum.cpp
-    g++ -o LargetSubarray LargetSubarray.cpp
-    g++ -o fourSum fourSum.cpp
-    g++ -o LongSubWithout LongSubWithout.cpp
-    g++ -o LongestConsSeq LongestConsSeq.cpp
-    g++ -o CountXor CountXor.cpp
-    g++ -o PalindromeLL PalindromeLL.cpp
-    g++ -o MaxConsOnes MaxConsOnes.cpp
-    g++ -o threeSum threeSum.cpp
-    g++ -o KRevLL KRevLL.cpp
-    g++ -o CycleLL CycleLL.cpp
-    g++ -o AddTwoNumLL AddTwoNumLL.cpp
-    ```
-4. Run the compiled programs:
-    ```sh
-    ./setMatrixZeroes
-    ./PascalTriangle
-    ./Kadanes
-    ./SortColors
-    ./RotateMat
-    ./Duplicate
-    ./MergeInt
-    ./NextPermutation
-    ./RepeatMissign
-    ./MergeSorted
-    ./CountInversion
-    ./MojorEl
-    ./Search_In_2D
-    ./ReversePairs
-    ./Pow
-    ./Maj_El
-    ./UniquePaths
-    ./TwoSum
-    ./LargetSubarray
-    ./fourSum
-    ./LongSubWithout
-    ./LongestConsSeq
-    ./CountXor
-    ./PalindromeLL
-    ./MaxConsOnes
-    ./threeSum
-    ./KRevLL
-    ./CycleLL
-    ./AddTwoNumLL
-    ```
 
 ## Function Descriptions
 
@@ -513,3 +443,19 @@ ListNode* head = new ListNode(1);
 head->next = new ListNode(2);
 head->next->next = new ListNode(2);
 head->next->
+
+###ListNode * rotateRight (ListNode* head , int k)
+This function rotates a linked list to the right by k places.
+
+####Parameters:
+head: A pointer to the head of the linked list.
+k: An integer representing the number of places to rotate.
+#### Example:
+```cpp
+ListNode* head = new ListNode(1);
+head->next = new ListNode(2);
+head->next->next = new ListNode(3);
+head->next->next->next = new ListNode(4);
+head->next->next->next->next = new ListNode(5);
+ListNode* result = rotateRight(head, 2);
+// The result will be the linked list: 4 -> 5 -> 1 -> 2 -> 3
