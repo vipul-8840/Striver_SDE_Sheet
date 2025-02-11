@@ -36,8 +36,6 @@ This project contains C++ implementations of various algorithms.
 - `RotateLL.cpp`: Contains the implementation of the `rotateRight` function which rotates a linked list to the right by k places.
 - `TrappingRainWater.cpp`: Contains the implementation of the `trap` function which calculates the amount of trapped rainwater given an elevation map.
 
-
-
 ## Function Descriptions
 
 ### `void setZeroes(vector<vector<int>>& mat)`
@@ -462,8 +460,16 @@ head->next->next->next->next = new ListNode(5);
 ListNode* result = rotateRight(head, 2);
 // The result will be the linked list: 4 -> 5 -> 1 -> 2 -> 3
 
-## int trap(vector<int>& height)
+### `int trap(vector<int>& height)`
+
 This function calculates the amount of trapped rainwater given an elevation map.
 
-##Parameters:
-height: A reference to a vector of integers representing the elevation map.
+#### Parameters:
+- `height`: A reference to a vector of integers representing the elevation map.
+
+#### Example:
+```cpp
+vector<int> height = {0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1};
+int water = trap(height);
+// The water will be 6
+```
