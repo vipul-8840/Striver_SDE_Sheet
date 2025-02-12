@@ -35,6 +35,7 @@ This project contains C++ implementations of various algorithms.
 - `AddTwoNumLL.cpp`: Contains the implementation of the `addTwoNumbers` function which adds two numbers represented by linked lists.
 - `RotateLL.cpp`: Contains the implementation of the `rotateRight` function which rotates a linked list to the right by k places.
 - `TrappingRainWater.cpp`: Contains the implementation of the `trap` function which calculates the amount of trapped rainwater given an elevation map.
+- `FlattenLL.cpp`: Contains the implementation of the `flatten` function which flattens a linked list where each node may have a next and bottom pointer.
 
 ## Function Descriptions
 
@@ -459,6 +460,7 @@ head->next->next->next = new ListNode(4);
 head->next->next->next->next = new ListNode(5);
 ListNode* result = rotateRight(head, 2);
 // The result will be the linked list: 4 -> 5 -> 1 -> 2 -> 3
+```
 
 ### `int trap(vector<int>& height)`
 
@@ -472,4 +474,22 @@ This function calculates the amount of trapped rainwater given an elevation map.
 vector<int> height = {0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1};
 int water = trap(height);
 // The water will be 6
+```
+
+### `Node* flatten(Node* root)`
+
+This function flattens a linked list where each node may have a next and bottom pointer.
+
+#### Parameters:
+- `root`: A pointer to the head of the linked list.
+
+#### Example:
+```cpp
+Node* root = new Node(5);
+root->bottom = new Node(7);
+root->bottom->bottom = new Node(8);
+root->next = new Node(10);
+root->next->bottom = new Node(20);
+Node* flattened = flatten(root);
+// The flattened list will be: 5 -> 7 -> 8 -> 10 -> 20
 ```
