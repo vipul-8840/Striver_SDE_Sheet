@@ -25,6 +25,52 @@ using namespace std;
 //     return m[head];
 // }
 
-// m-2 method solved to problem 
+// m-2 method solved to problem  without using hashmap 
+
+void createNode(Node * head)
+    {
+          Node * curr = head ;
+          while(curr)
+          {
+            Node* temp = new Node (curr->val);
+            temp->next = curr->next ;
+            curr->next = temp;
+            curr = curr->next->next;
+          }
+    }
+    void RandomPointer (Node * head)
+    {
+        Node * curr = head;
+        while(curr)
+        {
+            if(curr->random)
+            {
+                curr->next->random = curr->random->next;
+            }
+            curr = curr->next->next;
+        }
+    }
+
+   Node * deepCopy(Node*head)
+   {
+       Node* dummyNode = new Node(-1);
+       Node* res = dummyNode;
+       Node * curr = head;
+       while(curr)
+       {
+          res->next = curr->next;
+          curr->next = curr->next->next;
+          curr = curr->next;
+          res = res->next ;
+       }
+       return dummyNode->next;
+   }
+    Node* copyRandomList(Node* head) {
+
+        createNode(head);
+        RandomPointer(head);
+        return deepCopy(head);
+        
+    }
 
 
