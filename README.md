@@ -36,6 +36,7 @@ This project contains C++ implementations of various algorithms.
 - `RotateLL.cpp`: Contains the implementation of the `rotateRight` function which rotates a linked list to the right by k places.
 - `TrappingRainWater.cpp`: Contains the implementation of the `trap` function which calculates the amount of trapped rainwater given an elevation map.
 - `FlattenLL.cpp`: Contains the implementation of the `flatten` function which flattens a linked list where each node may have a next and bottom pointer.
+- `CloneLL.cpp`: Contains the implementation of the `copyRandomList` function which creates a deep copy of a linked list with random pointers.
 
 ## Function Descriptions
 
@@ -492,4 +493,21 @@ root->next = new Node(10);
 root->next->bottom = new Node(20);
 Node* flattened = flatten(root);
 // The flattened list will be: 5 -> 7 -> 8 -> 10 -> 20
+```
+
+### `Node* copyRandomList(Node* head)`
+
+This function creates a deep copy of a linked list with random pointers.
+
+#### Parameters:
+- `head`: A pointer to the head of the linked list.
+
+#### Example:
+```cpp
+Node* head = new Node(1);
+head->next = new Node(2);
+head->random = head->next;
+head->next->random = head;
+Node* copiedList = copyRandomList(head);
+// The copied list will have the same structure as the original list
 ```
