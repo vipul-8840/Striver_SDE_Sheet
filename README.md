@@ -183,6 +183,7 @@ This function generates the next lexicographical permutation of an array.
 - `nums`: A reference to a vector of integers.
 
 #### Example:
+
 ```cpp
 vector<int> nums = {1, 2, 3};
 nextPermutation(nums);
