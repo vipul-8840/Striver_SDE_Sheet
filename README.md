@@ -37,6 +37,7 @@ This project contains C++ implementations of various algorithms.
 - `TrappingRainWater.cpp`: Contains the implementation of the `trap` function which calculates the amount of trapped rainwater given an elevation map.
 - `FlattenLL.cpp`: Contains the implementation of the `flatten` function which flattens a linked list where each node may have a next and bottom pointer.
 - `CloneLL.cpp`: Contains the implementation of the `copyRandomList` function which creates a deep copy of a linked list with random pointers.
+- `Greedy/Coins.cpp`: Contains the implementation of the `main` function which finds the minimum number of coins required to form a given total amount.
 
 ## Function Descriptions
 
@@ -511,4 +512,24 @@ head->random = head->next;
 head->next->random = head;
 Node* copiedList = copyRandomList(head);
 // The copied list will have the same structure as the original list
+```
+
+### `int main()`
+
+This function finds the minimum number of coins required to form a given total amount.
+
+#### Example:
+```cpp
+int arr[] = {5, 2, 1, 10, 6};
+int total = 52;
+int res = 0;
+sort(arr, arr + 5);
+for (int i = 4; i >= 0; i--) {
+    if (arr[i] <= total) {
+        res += total / arr[i];
+        total = total % arr[i];
+    }
+}
+cout << "Minimum No Of Coins: " << res << endl;
+// The result will be 6
 ```
