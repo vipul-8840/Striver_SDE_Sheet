@@ -38,6 +38,7 @@ This project contains C++ implementations of various algorithms.
 - `FlattenLL.cpp`: Contains the implementation of the `flatten` function which flattens a linked list where each node may have a next and bottom pointer.
 - `CloneLL.cpp`: Contains the implementation of the `copyRandomList` function which creates a deep copy of a linked list with random pointers.
 - `Greedy/Coins.cpp`: Contains the implementation of the `main` function which finds the minimum number of coins required to form a given total amount.
+- `Greedy/MeetingRoom.cpp`: Contains the implementation of the `maxMeetings` function which finds the maximum number of meetings that can be scheduled without conflicts.
 
 ## Function Descriptions
 
@@ -532,4 +533,20 @@ for (int i = 4; i >= 0; i--) {
 }
 cout << "Minimum No Of Coins: " << res << endl;
 // The result will be 6
+```
+
+### `int maxMeetings(vector<int>& start, vector<int>& end)`
+
+This function finds the maximum number of meetings that can be scheduled without conflicts.
+
+#### Parameters:
+- `start`: A reference to a vector of integers representing the start times of the meetings.
+- `end`: A reference to a vector of integers representing the end times of the meetings.
+
+#### Example:
+```cpp
+vector<int> start = {1, 3, 0, 5, 8, 5};
+vector<int> end = {2, 4, 6, 7, 9, 9};
+int max_meetings = maxMeetings(start, end);
+// The max_meetings will be 4
 ```
