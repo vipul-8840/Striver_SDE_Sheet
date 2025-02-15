@@ -39,6 +39,7 @@ This project contains C++ implementations of various algorithms.
 - `CloneLL.cpp`: Contains the implementation of the `copyRandomList` function which creates a deep copy of a linked list with random pointers.
 - `Greedy/Coins.cpp`: Contains the implementation of the `main` function which finds the minimum number of coins required to form a given total amount.
 - `Greedy/MeetingRoom.cpp`: Contains the implementation of the `maxMeetings` function which finds the maximum number of meetings that can be scheduled without conflicts.
+- `Greedy/Koko.cpp`: Contains the implementation of the `main` function which finds the minimum eating speed for Koko to finish all bananas within H hours.
 
 ## Function Descriptions
 
@@ -77,7 +78,6 @@ This function generates a row of Pascal's Triangle using the combination formula
 vector<int> row = generateRow(5);
 // The row will be: {1, 4, 6, 4, 1}
 ```
-
 ### `vector<vector<int>> generate(int Rows)`
 
 This function generates Pascal's Triangle up to the given number of rows.
