@@ -40,6 +40,7 @@ This project contains C++ implementations of various algorithms.
 - `Greedy/Coins.cpp`: Contains the implementation of the `main` function which finds the minimum number of coins required to form a given total amount.
 - `Greedy/MeetingRoom.cpp`: Contains the implementation of the `maxMeetings` function which finds the maximum number of meetings that can be scheduled without conflicts.
 - `String/decimal.cpp`: Contains the implementation of the `convert_To_decimal` function which converts a number from a given base to decimal.
+- `Greedy/MinimumPlatform.cpp`: Contains the implementation of the `findPlatform` function which finds the minimum number of platforms required at a railway station.
 
 ## Function Descriptions
 
@@ -565,4 +566,20 @@ string num = "1A";
 int base = 16;
 int decimal = convert_To_decimal(num, base);
 // The decimal value will be 26
+```
+
+### `int findPlatform(vector<int>& arr, vector<int>& dep)`
+
+This function finds the minimum number of platforms required at a railway station.
+
+#### Parameters:
+- `arr`: A reference to a vector of integers representing the arrival times of the trains.
+- `dep`: A reference to a vector of integers representing the departure times of the trains.
+
+#### Example:
+```cpp
+vector<int> arr = {900, 940, 950, 1100, 1500, 1800};
+vector<int> dep = {910, 1200, 1120, 1130, 1900, 2000};
+int platforms = findPlatform(arr, dep);
+// The platforms required will be 3
 ```
