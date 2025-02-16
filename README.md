@@ -39,7 +39,7 @@ This project contains C++ implementations of various algorithms.
 - `CloneLL.cpp`: Contains the implementation of the `copyRandomList` function which creates a deep copy of a linked list with random pointers.
 - `Greedy/Coins.cpp`: Contains the implementation of the `main` function which finds the minimum number of coins required to form a given total amount.
 - `Greedy/MeetingRoom.cpp`: Contains the implementation of the `maxMeetings` function which finds the maximum number of meetings that can be scheduled without conflicts.
-- `Greedy/Koko.cpp`: Contains the implementation of the `main` function which finds the minimum eating speed for Koko to finish all bananas within H hours.
+- `String/decimal.cpp`: Contains the implementation of the `convert_To_decimal` function which converts a number from a given base to decimal.
 
 ## Function Descriptions
 
@@ -549,4 +549,20 @@ vector<int> start = {1, 3, 0, 5, 8, 5};
 vector<int> end = {2, 4, 6, 7, 9, 9};
 int max_meetings = maxMeetings(start, end);
 // The max_meetings will be 4
+```
+
+### `int convert_To_decimal(string s, int b)`
+
+This function converts a number from a given base to decimal.
+
+#### Parameters:
+- `s`: A string representing the number in the given base.
+- `b`: An integer representing the base of the number.
+
+#### Example:
+```cpp
+string num = "1A";
+int base = 16;
+int decimal = convert_To_decimal(num, base);
+// The decimal value will be 26
 ```
