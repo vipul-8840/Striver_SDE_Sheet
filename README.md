@@ -43,7 +43,6 @@ This project contains C++ implementations of various algorithms.
 - `Greedy/MinimumPlatform.cpp`: Contains the implementation of the `findPlatform` function which finds the minimum number of platforms required at a railway station.
 
 ## Function Descriptions
-
 ### `void setZeroes(vector<vector<int>>& mat)`
 
 This function takes a 2D vector `mat` as input and sets the entire row and column to 0 if an element is 0.
