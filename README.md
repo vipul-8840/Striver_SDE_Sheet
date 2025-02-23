@@ -43,6 +43,10 @@ This project contains C++ implementations of various algorithms.
 - `Greedy/MinimumPlatform.cpp`: Contains the implementation of the `findPlatform` function which finds the minimum number of platforms required at a railway station.
 - `BitManipulation/DecitoBin.cpp`: Contains the implementation of the function to convert a decimal number to binary.
 - `BitManipulation/BinTodeci.cpp`: Contains the implementation of the function to convert a binary number to decimal.
+- `BitManipulation/SwaptoNo.cpp`: Contains the implementation of the function to swap two numbers using bitwise XOR.
+- `BitManipulation/KthBitset.cpp`: Contains the implementation of the function to set the Kth bit of a number.
+- `BitManipulation/KthBit.cpp`: Contains the implementation of the function to check if the Kth bit of a number is set.
+- `BitManipulation/ClearBit.cpp`: Contains the implementation of the function to clear the Kth bit of a number.
 
 ## Function Descriptions
 ### `void setZeroes(vector<vector<int>>& mat)`
