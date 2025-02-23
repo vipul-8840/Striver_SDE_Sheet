@@ -41,6 +41,8 @@ This project contains C++ implementations of various algorithms.
 - `Greedy/MeetingRoom.cpp`: Contains the implementation of the `maxMeetings` function which finds the maximum number of meetings that can be scheduled without conflicts.
 - `String/decimal.cpp`: Contains the implementation of the `convert_To_decimal` function which converts a number from a given base to decimal.
 - `Greedy/MinimumPlatform.cpp`: Contains the implementation of the `findPlatform` function which finds the minimum number of platforms required at a railway station.
+- `BitManipulation/DecitoBin.cpp`: Contains the implementation of the function to convert a decimal number to binary.
+- `BitManipulation/BinTodeci.cpp`: Contains the implementation of the function to convert a binary number to decimal.
 
 ## Function Descriptions
 ### `void setZeroes(vector<vector<int>>& mat)`
