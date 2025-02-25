@@ -26,3 +26,4 @@ int divide(int dividend, int divisor)
      return flag * ans ;
       
     }
+    postgresql://neondb_owner:npg_vuXxk4WFJ8Od@ep-blue-pine-a8uttec8-pooler.eastus2.azure.neon.tech/neondb?sslmode=require
