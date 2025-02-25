@@ -47,6 +47,9 @@ This project contains C++ implementations of various algorithms.
 - `BitManipulation/KthBitset.cpp`: Contains the implementation of the function to set the Kth bit of a number.
 - `BitManipulation/KthBit.cpp`: Contains the implementation of the function to check if the Kth bit of a number is set.
 - `BitManipulation/ClearBit.cpp`: Contains the implementation of the function to clear the Kth bit of a number.
+- `BitManipulation/OddEven.cpp`: Contains the implementation of the function to check if a number is odd or even using bitwise operations.
+- `BitManipulation/DivideTwoInterger.cpp`: Contains the implementation of the function to divide two integers without using multiplication, division, and mod operator.
+- `BitManipulation/CountTotalBits.cpp`: Contains the implementation of the function to count the total number of set bits from 1 to n.
 
 ## Function Descriptions
 ### `void setZeroes(vector<vector<int>>& mat)`
