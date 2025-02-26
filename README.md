@@ -50,6 +50,10 @@ This project contains C++ implementations of various algorithms.
 - `BitManipulation/OddEven.cpp`: Contains the implementation of the function to check if a number is odd or even using bitwise operations.
 - `BitManipulation/DivideTwoInterger.cpp`: Contains the implementation of the function to divide two integers without using multiplication, division, and mod operator.
 - `BitManipulation/CountTotalBits.cpp`: Contains the implementation of the function to count the total number of set bits from 1 to n.
+- `BitManipulation/SingleNumber.cpp`: Contains the implementation of the function to find the single number that appears only once in an array.
+- `BitManipulation/MIniumBit.cpp`: Contains the implementation of the function to find the minimum number of bit flips required to convert one integer to another.
+- `BitManipulation/TwoNumberOdd.cpp`: Contains the implementation of the function to find two numbers that appear an odd number of times in an array.
+- `BitManipulation/Subsets.cpp`: Contains the implementation of the function to generate all possible subsets of a given set of numbers.
 
 ## Function Descriptions
 ### `void setZeroes(vector<vector<int>>& mat)`
