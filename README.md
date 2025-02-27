@@ -54,6 +54,8 @@ This project contains C++ implementations of various algorithms.
 - `BitManipulation/MIniumBit.cpp`: Contains the implementation of the function to find the minimum number of bit flips required to convert one integer to another.
 - `BitManipulation/TwoNumberOdd.cpp`: Contains the implementation of the function to find two numbers that appear an odd number of times in an array.
 - `BitManipulation/Subsets.cpp`: Contains the implementation of the function to generate all possible subsets of a given set of numbers.
+- `BitManipulation/Primefactor.cpp`: Contains the implementation of the function to find all prime factors of a given number.
+- `BitManipulation/Xor.cpp`: Contains the implementation of the function to find the XOR of all numbers in a given range.
 
 ## Function Descriptions
 ### `void setZeroes(vector<vector<int>>& mat)`
