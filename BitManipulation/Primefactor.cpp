@@ -39,22 +39,22 @@ using namespace std;
 
 //minimu time complexity (sqrtN)*(logN)
 
-vector<int>AllPrimeFactors(int N) {
-	// Code here
-	vector<int>ans;
-	for(int i=2;i*i<=N;i++)
-	{
-		if(N%i==0)
-		{
-			ans.push_back(i);
-			while(N%i==0)
-			{
-				N = N/i;
-			}
-		}
-	}
-	if(N!=1)
-	ans.push_back(N);
+// vector<int>AllPrimeFactors(int N) {
+// 	// Code here
+// 	vector<int>ans;
+// 	for(int i=2;i*i<=N;i++)
+// 	{
+// 		if(N%i==0)
+// 		{
+// 			ans.push_back(i);
+// 			while(N%i==0)
+// 			{
+// 				N = N/i;
+// 			}
+// 		}
+// 	}
+// 	if(N!=1)
+// 	ans.push_back(N);
 	
-	return ans;
-}
+// 	return ans;
+// }
