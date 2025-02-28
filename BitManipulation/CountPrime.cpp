@@ -12,6 +12,7 @@ int countPrimes(int n)
              
                 for(int j = i*i ;j<n;j=j+i)
                 {
+                     
                     arr[j]=0;
                 }
             }
@@ -25,4 +26,3 @@ int countPrimes(int n)
         
     }
 
-    
