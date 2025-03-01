@@ -58,6 +58,8 @@ This project contains C++ implementations of various algorithms.
 - `BitManipulation/Xor.cpp`: Contains the implementation of the function to find the XOR of all numbers in a given range.
 - `BitManipulation/CountPrime.cpp`: Contains the implementation of the function to count the number of prime numbers less than a given number.
 - `BitManipulation/primefactorization.cpp`: Contains the implementation of the function to perform prime factorization of a given number.
+- `String/ReverseWord.cpp`: Contains the implementation of the function to reverse the words in a given string.
+- `String/RemoveParenthesis.cpp`: Contains the implementation of the function to remove the outermost parentheses from a given string.
 
 ## Function Descriptions
 ### `void setZeroes(vector<vector<int>>& mat)`
