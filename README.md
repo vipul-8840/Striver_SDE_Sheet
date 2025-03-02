@@ -69,6 +69,7 @@ This function takes a 2D vector `mat` as input and sets the entire row and colum
 #### Parameters:
 - `mat`: A reference to a 2D vector of integers representing the matrix.
 
+
 #### Example:
 ```cpp
 vector<vector<int>> matrix = {
