@@ -60,6 +60,8 @@ This project contains C++ implementations of various algorithms.
 - `BitManipulation/primefactorization.cpp`: Contains the implementation of the function to perform prime factorization of a given number.
 - `String/ReverseWord.cpp`: Contains the implementation of the function to reverse the words in a given string.
 - `String/RemoveParenthesis.cpp`: Contains the implementation of the function to remove the outermost parentheses from a given string.
+- `String/Anagram.cpp`: Contains the implementation of the function to check if two strings are anagrams.
+- `String/RotateString.cpp`: Contains the implementation of the function to check if one string is a rotation of another.
 
 ## Function Descriptions
 ### `void setZeroes(vector<vector<int>>& mat)`
@@ -68,7 +70,6 @@ This function takes a 2D vector `mat` as input and sets the entire row and colum
 
 #### Parameters:
 - `mat`: A reference to a 2D vector of integers representing the matrix.
-
 
 #### Example:
 ```cpp
