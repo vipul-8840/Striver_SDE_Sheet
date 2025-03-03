@@ -62,6 +62,7 @@ This project contains C++ implementations of various algorithms.
 - `String/RemoveParenthesis.cpp`: Contains the implementation of the function to remove the outermost parentheses from a given string.
 - `String/Anagram.cpp`: Contains the implementation of the function to check if two strings are anagrams.
 - `String/RotateString.cpp`: Contains the implementation of the function to check if one string is a rotation of another.
+- `String/sortfreq.cpp`: Contains the implementation of the function to sort characters in a string by frequency.
 
 ## Function Descriptions
 ### `void setZeroes(vector<vector<int>>& mat)`
