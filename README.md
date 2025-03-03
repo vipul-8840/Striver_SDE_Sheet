@@ -64,6 +64,7 @@ This project contains C++ implementations of various algorithms.
 - `String/RotateString.cpp`: Contains the implementation of the function to check if one string is a rotation of another.
 - `String/sortfreq.cpp`: Contains the implementation of the function to sort characters in a string by frequency.
 - `String/Parentheses.cpp`: Contains the implementation of the `maxDepth` function which finds the maximum depth of nested parentheses in a string.
+- `String/StringAtoi.cpp`: Contains the implementation of the `myAtoi` function which converts a string to an integer.
 
 ## Function Descriptions
 ### `void setZeroes(vector<vector<int>>& mat)`
@@ -618,4 +619,18 @@ This function finds the maximum depth of nested parentheses in a string.
 string s = "(1+(2*3)+((8)/4))+1";
 int depth = maxDepth(s);
 // The depth will be 3
+```
+
+### `int myAtoi(string s)`
+
+This function converts a string to an integer.
+
+#### Parameters:
+- `s`: A string representing the input string.
+
+#### Example:
+```cpp
+string s = "42";
+int num = myAtoi(s);
+// The num will be 42
 ```
