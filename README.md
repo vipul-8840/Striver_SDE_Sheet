@@ -63,6 +63,7 @@ This project contains C++ implementations of various algorithms.
 - `String/Anagram.cpp`: Contains the implementation of the function to check if two strings are anagrams.
 - `String/RotateString.cpp`: Contains the implementation of the function to check if one string is a rotation of another.
 - `String/sortfreq.cpp`: Contains the implementation of the function to sort characters in a string by frequency.
+- `String/Parentheses.cpp`: Contains the implementation of the `maxDepth` function which finds the maximum depth of nested parentheses in a string.
 
 ## Function Descriptions
 ### `void setZeroes(vector<vector<int>>& mat)`
@@ -603,4 +604,18 @@ vector<int> arr = {900, 940, 950, 1100, 1500, 1800};
 vector<int> dep = {910, 1200, 1120, 1130, 1900, 2000};
 int platforms = findPlatform(arr, dep);
 // The platforms required will be 3
+```
+
+### `int maxDepth(string s)`
+
+This function finds the maximum depth of nested parentheses in a string.
+
+#### Parameters:
+- `s`: A string representing the input string.
+
+#### Example:
+```cpp
+string s = "(1+(2*3)+((8)/4))+1";
+int depth = maxDepth(s);
+// The depth will be 3
 ```
