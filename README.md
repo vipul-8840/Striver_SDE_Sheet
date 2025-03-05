@@ -476,18 +476,7 @@ head->next->
 ###ListNode * rotateRight (ListNode* head , int k)
 This function rotates a linked list to the right by k places.
 
-####Parameters:
-head: A pointer to the head of the linked list.
-k: An integer representing the number of places to rotate.
-#### Example:
-```cpp
-ListNode* head = new ListNode(1);
-head->next = new ListNode(2);
-head->next->next = new ListNode(3);
-head->next->next->next = new ListNode(4);
-head->next->next->next->next = new ListNode(5);
-ListNode* result = rotateRight(head, 2);
-// The result will be the linked list: 4 -> 5 -> 1 -> 2 -> 3
+
 ```
 
 ### `int trap(vector<int>& height)`
