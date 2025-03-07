@@ -7,7 +7,7 @@ string longestCommonPrefix(vector<string>& s) {
 
     for(int i = 1;i<s.size();i++)
     {
-        
+
        int j = 0;
        while(j<s[0].size() && j<s[i].size() )
        {
