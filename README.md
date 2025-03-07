@@ -65,6 +65,8 @@ This project contains C++ implementations of various algorithms.
 - `String/sortfreq.cpp`: Contains the implementation of the function to sort characters in a string by frequency.
 - `String/Parentheses.cpp`: Contains the implementation of the `maxDepth` function which finds the maximum depth of nested parentheses in a string.
 - `String/StringAtoi.cpp`: Contains the implementation of the `myAtoi` function which converts a string to an integer.
+- `String/LongestPrefix.cpp`: Contains the implementation of the `longestCommonPrefix` function which finds the longest common prefix string amongst an array of strings.
+- `String/SubstringKdistinct.cpp`: Contains the implementation of the `countSubstr` function which counts the number of substrings with exactly K distinct characters.
 
 ## Function Descriptions
 ### `void setZeroes(vector<vector<int>>& mat)`
@@ -622,4 +624,34 @@ This function converts a string to an integer.
 string s = "42";
 int num = myAtoi(s);
 // The num will be 42
+```
+
+### `string longestCommonPrefix(vector<string>& s)`
+
+This function finds the longest common prefix string amongst an array of strings.
+
+#### Parameters:
+- `s`: A reference to a vector of strings.
+
+#### Example:
+```cpp
+vector<string> strs = {"flower", "flow", "flight"};
+string prefix = longestCommonPrefix(strs);
+// The prefix will be "fl"
+```
+
+### `int countSubstr(string& s, int k)`
+
+This function counts the number of substrings with exactly K distinct characters.
+
+#### Parameters:
+- `s`: A reference to a string.
+- `k`: An integer representing the number of distinct characters.
+
+#### Example:
+```cpp
+string s = "pqpqs";
+int k = 2;
+int count = countSubstr(s, k);
+// The count will be 7
 ```
