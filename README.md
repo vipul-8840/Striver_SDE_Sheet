@@ -70,6 +70,7 @@ This project contains C++ implementations of various algorithms.
 - `String/SumBeautySubstrings.cpp`: Contains the implementation of the `beautySum` function which calculates the sum of beauty of all substrings of a given string.
 - `BinarySearch/BinarySear.cpp`: Contains the implementation of the `search` function which performs binary search on a sorted array.
 - `BinarySearch/FlorSorted.cpp`: Contains the implementation of the `findFloor` function which finds the floor of a given number in a sorted array.
+- `BinarySearch/SearchInsert.cpp`: Contains the implementation of the `searchInsert` function which finds the index of a target value in a sorted array or the index where it should be inserted.
 
 ## Function Descriptions
 ### `void setZeroes(vector<vector<int>>& mat)`
@@ -87,7 +88,7 @@ vector<vector<int>> matrix = {
     {1, 1, 1}
 };
 setZeroes(matrix);
-
+```
 
 ### `vector<int> generateRow(int n)`
 
@@ -111,7 +112,7 @@ This function generates Pascal's Triangle up to the given number of rows.
 #### Example:
 ```cpp
 vector<vector<int>> triangle = generate(5);
-
+```
 
 ### `int maxSubArray(vector<int>& nums)`
 
@@ -124,7 +125,6 @@ This function finds the maximum sum of a contiguous subarray using Kadane's Algo
 ```cpp
 vector<int> nums = {-2, 1, -3, 4, -1, 2, 1, -5, 4};
 int max_sum = maxSubArray(nums);
-
 ```
 
 ### `void sortColors(vector<int>& nums)`
@@ -138,7 +138,8 @@ This function sorts an array containing 0s, 1s, and 2s in-place.
 ```cpp
 vector<int> nums = {2, 0, 2, 1, 1, 0};
 sortColors(nums);
-// The nums array will be sorted to: {0, 0, 1, 1, 
+// The nums array will be sorted to: {0, 0, 1, 1, 2}
+```
 
 ### `void rotate(vector<vector<int>>& mat)`
 
@@ -155,7 +156,6 @@ vector<vector<int>> mat = {
     {7, 8, 9}
 };
 rotate(mat);
-
 ```
 
 ### `int findDuplicate(vector<int>& nums)`
@@ -169,7 +169,6 @@ This function finds the duplicate number in an array.
 ```cpp
 vector<int> nums = {1, 3, 4, 2, 2};
 int duplicate = findDuplicate(nums);
-
 ```
 
 ### `vector<vector<int>> merge(vector<vector<int>>& intervals)`
@@ -183,7 +182,6 @@ This function merges overlapping intervals.
 ```cpp
 vector<vector<int>> intervals = {{1, 3}, {2, 6}, {8, 10}, {15, 18}};
 vector<vector<int>> merged = merge(intervals);
-
 ```
 
 ### `void nextPermutation(vector<int>& nums)`
@@ -194,11 +192,9 @@ This function generates the next lexicographical permutation of an array.
 - `nums`: A reference to a vector of integers.
 
 #### Example:
-
 ```cpp
 vector<int> nums = {1, 2, 3};
 nextPermutation(nums);
-
 ```
 
 ### `int main()`
@@ -456,12 +452,28 @@ This function checks if a linked list is a palindrome.
 ListNode* head = new ListNode(1);
 head->next = new ListNode(2);
 head->next->next = new ListNode(2);
-head->next->
+head->next->next->next = new ListNode(1);
+bool result = isPalindrome(head);
+// The result will be true
+```
 
-###ListNode * rotateRight (ListNode* head , int k)
+### `ListNode* rotateRight(ListNode* head, int k)`
+
 This function rotates a linked list to the right by k places.
 
+#### Parameters:
+- `head`: A pointer to the head of the linked list.
+- `k`: An integer representing the number of places to rotate.
 
+#### Example:
+```cpp
+ListNode* head = new ListNode(1);
+head->next = new ListNode(2);
+head->next->next = new ListNode(3);
+head->next->next->next = new ListNode(4);
+head->next->next->next->next = new ListNode(5);
+ListNode* result = rotateRight(head, 2);
+// The result will be the list: 4 -> 5 -> 1 -> 2 -> 3
 ```
 
 ### `int trap(vector<int>& height)`
@@ -683,4 +695,20 @@ vector<int> arr = {1, 2, 8, 10, 10, 12, 19};
 int x = 5;
 int floorIndex = findFloor(arr, x);
 // The floorIndex will be 1
+```
+
+### `int searchInsert(vector<int>& nums, int target)`
+
+This function finds the index of a target value in a sorted array or the index where it should be inserted.
+
+#### Parameters:
+- `nums`: A reference to a vector of integers representing the sorted array.
+- `target`: An integer representing the target value.
+
+#### Example:
+```cpp
+vector<int> nums = {1, 3, 5, 6};
+int target = 5;
+int index = searchInsert(nums, target);
+// The index will be 2
 ```
