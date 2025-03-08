@@ -68,6 +68,8 @@ This project contains C++ implementations of various algorithms.
 - `String/LongestPrefix.cpp`: Contains the implementation of the `longestCommonPrefix` function which finds the longest common prefix string amongst an array of strings.
 - `String/SubstringKdistinct.cpp`: Contains the implementation of the `countSubstr` function which counts the number of substrings with exactly K distinct characters.
 - `String/SumBeautySubstrings.cpp`: Contains the implementation of the `beautySum` function which calculates the sum of beauty of all substrings of a given string.
+- `BinarySearch/BinarySear.cpp`: Contains the implementation of the `search` function which performs binary search on a sorted array.
+- `BinarySearch/FlorSorted.cpp`: Contains the implementation of the `findFloor` function which finds the floor of a given number in a sorted array.
 
 ## Function Descriptions
 ### `void setZeroes(vector<vector<int>>& mat)`
@@ -85,13 +87,7 @@ vector<vector<int>> matrix = {
     {1, 1, 1}
 };
 setZeroes(matrix);
-// The matrix will be modified to:
-// {
-//     {1, 0, 1},
-//     {0, 0, 0},
-//     {1, 0, 1}
-// }
-```
+
 
 ### `vector<int> generateRow(int n)`
 
@@ -115,15 +111,7 @@ This function generates Pascal's Triangle up to the given number of rows.
 #### Example:
 ```cpp
 vector<vector<int>> triangle = generate(5);
-// The triangle will be:
-// {
-//     {1},
-//     {1, 1},
-//     {1, 2, 1},
-//     {1, 3, 3, 1},
-//     {1, 4, 6, 4, 1}
-// }
-```
+
 
 ### `int maxSubArray(vector<int>& nums)`
 
@@ -136,7 +124,7 @@ This function finds the maximum sum of a contiguous subarray using Kadane's Algo
 ```cpp
 vector<int> nums = {-2, 1, -3, 4, -1, 2, 1, -5, 4};
 int max_sum = maxSubArray(nums);
-// The max_sum will be 6 for the subarray [4, -1, 2, 1]
+
 ```
 
 ### `void sortColors(vector<int>& nums)`
@@ -150,8 +138,7 @@ This function sorts an array containing 0s, 1s, and 2s in-place.
 ```cpp
 vector<int> nums = {2, 0, 2, 1, 1, 0};
 sortColors(nums);
-// The nums array will be sorted to: {0, 0, 1, 1, 2, 2}
-```
+// The nums array will be sorted to: {0, 0, 1, 1, 
 
 ### `void rotate(vector<vector<int>>& mat)`
 
@@ -168,12 +155,7 @@ vector<vector<int>> mat = {
     {7, 8, 9}
 };
 rotate(mat);
-// The matrix will be modified to:
-// {
-//     {7, 4, 1},
-//     {8, 5, 2},
-//     {9, 6, 3}
-// }
+
 ```
 
 ### `int findDuplicate(vector<int>& nums)`
@@ -187,7 +169,7 @@ This function finds the duplicate number in an array.
 ```cpp
 vector<int> nums = {1, 3, 4, 2, 2};
 int duplicate = findDuplicate(nums);
-// The duplicate will be 2
+
 ```
 
 ### `vector<vector<int>> merge(vector<vector<int>>& intervals)`
@@ -201,7 +183,7 @@ This function merges overlapping intervals.
 ```cpp
 vector<vector<int>> intervals = {{1, 3}, {2, 6}, {8, 10}, {15, 18}};
 vector<vector<int>> merged = merge(intervals);
-// The merged intervals will be: {{1, 6}, {8, 10}, {15, 18}}
+
 ```
 
 ### `void nextPermutation(vector<int>& nums)`
@@ -216,7 +198,7 @@ This function generates the next lexicographical permutation of an array.
 ```cpp
 vector<int> nums = {1, 2, 3};
 nextPermutation(nums);
-// The nums array will be modified to: {1, 3, 2}
+
 ```
 
 ### `int main()`
@@ -669,4 +651,36 @@ This function calculates the sum of beauty of all substrings of a given string.
 string s = "aabcb";
 int sum = beautySum(s);
 // The sum will be 5
+```
+
+### `int search(vector<int>& nums, int target)`
+
+This function performs binary search on a sorted array.
+
+#### Parameters:
+- `nums`: A reference to a vector of integers representing the sorted array.
+- `target`: An integer representing the target value to search for.
+
+#### Example:
+```cpp
+vector<int> nums = {1, 2, 3, 4, 5};
+int target = 3;
+int index = search(nums, target);
+// The index will be 2
+```
+
+### `int findFloor(vector<int>& arr, int x)`
+
+This function finds the floor of a given number in a sorted array.
+
+#### Parameters:
+- `arr`: A reference to a vector of integers representing the sorted array.
+- `x`: An integer representing the target value.
+
+#### Example:
+```cpp
+vector<int> arr = {1, 2, 8, 10, 10, 12, 19};
+int x = 5;
+int floorIndex = findFloor(arr, x);
+// The floorIndex will be 1
 ```
