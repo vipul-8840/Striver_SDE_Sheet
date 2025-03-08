@@ -71,6 +71,7 @@ This project contains C++ implementations of various algorithms.
 - `BinarySearch/BinarySear.cpp`: Contains the implementation of the `search` function which performs binary search on a sorted array.
 - `BinarySearch/FlorSorted.cpp`: Contains the implementation of the `findFloor` function which finds the floor of a given number in a sorted array.
 - `BinarySearch/SearchInsert.cpp`: Contains the implementation of the `searchInsert` function which finds the index of a target value in a sorted array or the index where it should be inserted.
+- `BinarySearch/firstLastOcc.cpp`: Contains the implementation of the `searchRange` function which finds the first and last occurrence of a target value in a sorted array.
 
 ## Function Descriptions
 ### `void setZeroes(vector<vector<int>>& mat)`
@@ -711,4 +712,20 @@ vector<int> nums = {1, 3, 5, 6};
 int target = 5;
 int index = searchInsert(nums, target);
 // The index will be 2
+```
+
+### `vector<int> searchRange(vector<int>& nums, int target)`
+
+This function finds the first and last occurrence of a target value in a sorted array.
+
+#### Parameters:
+- `nums`: A reference to a vector of integers representing the sorted array.
+- `target`: An integer representing the target value.
+
+#### Example:
+```cpp
+vector<int> nums = {5, 7, 7, 8, 8, 10};
+int target = 8;
+vector<int> range = searchRange(nums, target);
+// The range will be {3, 4}
 ```
