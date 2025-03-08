@@ -67,6 +67,7 @@ This project contains C++ implementations of various algorithms.
 - `String/StringAtoi.cpp`: Contains the implementation of the `myAtoi` function which converts a string to an integer.
 - `String/LongestPrefix.cpp`: Contains the implementation of the `longestCommonPrefix` function which finds the longest common prefix string amongst an array of strings.
 - `String/SubstringKdistinct.cpp`: Contains the implementation of the `countSubstr` function which counts the number of substrings with exactly K distinct characters.
+- `String/SumBeautySubstrings.cpp`: Contains the implementation of the `beautySum` function which calculates the sum of beauty of all substrings of a given string.
 
 ## Function Descriptions
 ### `void setZeroes(vector<vector<int>>& mat)`
@@ -654,4 +655,18 @@ string s = "pqpqs";
 int k = 2;
 int count = countSubstr(s, k);
 // The count will be 7
+```
+
+### `int beautySum(string s)`
+
+This function calculates the sum of beauty of all substrings of a given string.
+
+#### Parameters:
+- `s`: A string representing the input string.
+
+#### Example:
+```cpp
+string s = "aabcb";
+int sum = beautySum(s);
+// The sum will be 5
 ```
