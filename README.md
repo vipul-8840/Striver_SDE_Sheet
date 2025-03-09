@@ -72,6 +72,8 @@ This project contains C++ implementations of various algorithms.
 - `BinarySearch/FlorSorted.cpp`: Contains the implementation of the `findFloor` function which finds the floor of a given number in a sorted array.
 - `BinarySearch/SearchInsert.cpp`: Contains the implementation of the `searchInsert` function which finds the index of a target value in a sorted array or the index where it should be inserted.
 - `BinarySearch/firstLastOcc.cpp`: Contains the implementation of the `searchRange` function which finds the first and last occurrence of a target value in a sorted array.
+- `BinarySearch/SingleEleSorted.cpp`: Contains the implementation of the `singleNonDuplicate` function which finds the single element in a sorted array that appears only once.
+- `BinarySearch/NumberOfOccurence.cpp`: Contains the implementation of the `countFreq` function which counts the number of occurrences of a target value in a sorted array.
 
 ## Function Descriptions
 ### `void setZeroes(vector<vector<int>>& mat)`
@@ -728,4 +730,34 @@ vector<int> nums = {5, 7, 7, 8, 8, 10};
 int target = 8;
 vector<int> range = searchRange(nums, target);
 // The range will be {3, 4}
+```
+
+### `int singleNonDuplicate(vector<int>& nums)`
+
+This function finds the single element in a sorted array that appears only once.
+
+#### Parameters:
+- `nums`: A reference to a vector of integers representing the sorted array.
+
+#### Example:
+```cpp
+vector<int> nums = {1, 1, 2, 3, 3, 4, 4, 8, 8};
+int single = singleNonDuplicate(nums);
+// The single element will be 2
+```
+
+### `int countFreq(vector<int>& nums, int target)`
+
+This function counts the number of occurrences of a target value in a sorted array.
+
+#### Parameters:
+- `nums`: A reference to a vector of integers representing the sorted array.
+- `target`: An integer representing the target value.
+
+#### Example:
+```cpp
+vector<int> nums = {5, 7, 7, 8, 8, 10};
+int target = 8;
+int count = countFreq(nums, target);
+// The count will be 2
 ```
