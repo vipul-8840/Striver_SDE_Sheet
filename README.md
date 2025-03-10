@@ -452,7 +452,7 @@ This function checks if a linked list is a palindrome.
 
 #### Example:
 ```cpp
-ListNode* head = new ListNode(1);
+st
 head->next = new ListNode(2);
 head->next->next = new ListNode(2);
 head->next->next->next = new ListNode(1);
