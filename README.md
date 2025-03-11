@@ -3,7 +3,6 @@
 This project contains C++ implementations of various algorithms.
 
 ## File Descriptions
-
 - `setMatrixZeroes.cpp`: Contains the implementation of the `setZeroes` function which sets the matrix zeroes.
 - `PascalTriangle.cpp`: Contains the implementation of functions to generate Pascal's Triangle.
 - `Kadanes.cpp`: Contains the implementation of the `maxSubArray` function which finds the maximum sum of a contiguous subarray.
