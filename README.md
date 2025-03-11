@@ -73,6 +73,7 @@ This project contains C++ implementations of various algorithms.
 - `BinarySearch/firstLastOcc.cpp`: Contains the implementation of the `searchRange` function which finds the first and last occurrence of a target value in a sorted array.
 - `BinarySearch/SingleEleSorted.cpp`: Contains the implementation of the `singleNonDuplicate` function which finds the single element in a sorted array that appears only once.
 - `BinarySearch/NumberOfOccurence.cpp`: Contains the implementation of the `countFreq` function which counts the number of occurrences of a target value in a sorted array.
+- `BinarySearch/NRoot.cpp`: Contains the implementation of the `nthRoot` function which finds the nth root of a number using binary search.
 
 ## Function Descriptions
 ### `void setZeroes(vector<vector<int>>& mat)`
