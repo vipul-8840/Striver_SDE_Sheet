@@ -73,7 +73,14 @@ This project contains C++ implementations of various algorithms.
 - `BinarySearch/firstLastOcc.cpp`: Contains the implementation of the `searchRange` function which finds the first and last occurrence of a target value in a sorted array.
 - `BinarySearch/SingleEleSorted.cpp`: Contains the implementation of the `singleNonDuplicate` function which finds the single element in a sorted array that appears only once.
 - `BinarySearch/NumberOfOccurence.cpp`: Contains the implementation of the `countFreq` function which counts the number of occurrences of a target value in a sorted array.
+- `BinarySearch/CeilFloor.cpp`: Contains the implementation of the `getFloorAndCeil` function which finds the floor and ceiling of a given number in a sorted array.
+- `BinarySearch/KRotation.cpp`: Contains the implementation of the `findKRotation` function which finds the index of the smallest element in a rotated sorted array.
 - `BinarySearch/NRoot.cpp`: Contains the implementation of the `nthRoot` function which finds the nth root of a number using binary search.
+- `BinarySearch/Search2DMat.cpp`: Contains the implementation of the `searchMatrix` function which searches for a target value in a 2D matrix.
+- `BinarySearch/RowMax1.cpp`: Contains the implementation of the `rowWithMax1s` function which finds the row with the maximum number of 1s in a binary matrix.
+- `BinarySearch/SquareRoot.cpp`: Contains the implementation of the `floorSqrt` function which finds the floor value of the square root of a number.
+- `BinarySearch/SearchRotated2.cpp`: Contains the implementation of the `search` function which searches for a target value in a rotated sorted array.
+- `BinarySearch/MinRotated.cpp`: Contains the implementation of the `findMin` function which finds the minimum element in a rotated sorted array.
 
 ## Function Descriptions
 ### `void setZeroes(vector<vector<int>>& mat)`
