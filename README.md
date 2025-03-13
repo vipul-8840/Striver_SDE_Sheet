@@ -81,6 +81,8 @@ This project contains C++ implementations of various algorithms.
 - `BinarySearch/SquareRoot.cpp`: Contains the implementation of the `floorSqrt` function which finds the floor value of the square root of a number.
 - `BinarySearch/SearchRotated2.cpp`: Contains the implementation of the `search` function which searches for a target value in a rotated sorted array.
 - `BinarySearch/MinRotated.cpp`: Contains the implementation of the `findMin` function which finds the minimum element in a rotated sorted array.
+- `BinarySearch/PeakEl.cpp`: Contains the implementation of the `findPeakElement` function which finds a peak element in an array.
+- `BinarySearch/PeakEl2.cpp`: Contains the implementation of the `findPeakGrid` function which finds a peak element in a 2D matrix.
 
 ## Function Descriptions
 ### `void setZeroes(vector<vector<int>>& mat)`
@@ -752,7 +754,6 @@ vector<int> nums = {1, 1, 2, 3, 3, 4, 4, 8, 8};
 int single = singleNonDuplicate(nums);
 // The single element will be 2
 ```
-
 ### `int countFreq(vector<int>& nums, int target)`
 
 This function counts the number of occurrences of a target value in a sorted array.
