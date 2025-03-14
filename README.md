@@ -751,7 +751,7 @@ This function finds the single element in a sorted array that appears only once.
 #### Example:
 ```cpp
 vector<int> nums = {1, 1, 2, 3, 3, 4, 4, 8, 8};
-int single = singleNonDuplicate(nums);
+int single = singleNonDuplicajte(nums);
 // The single element will be 2
 ```
 ### `int countFreq(vector<int>& nums, int target)`
