@@ -83,6 +83,9 @@ This project contains C++ implementations of various algorithms.
 - `BinarySearch/MinRotated.cpp`: Contains the implementation of the `findMin` function which finds the minimum element in a rotated sorted array.
 - `BinarySearch/PeakEl.cpp`: Contains the implementation of the `findPeakElement` function which finds a peak element in an array.
 - `BinarySearch/PeakEl2.cpp`: Contains the implementation of the `findPeakGrid` function which finds a peak element in a 2D matrix.
+- `BinarySearch/KthMissing.cpp`: Contains the implementation of the `findKthPositive` function which finds the Kth missing positive number in a sorted array.
+- `BinarySearch/Thershold.cpp`: Contains the implementation of the `smallestDivisor` function which finds the smallest divisor such that the sum of the division results is less than or equal to a threshold.
+- `BinarySearch/Koko.cpp`: Contains the implementation of the `minEatingSpeed` function which finds the minimum eating speed to finish eating all bananas within h hours.
 
 ## Function Descriptions
 ### `void setZeroes(vector<vector<int>>& mat)`
@@ -751,9 +754,10 @@ This function finds the single element in a sorted array that appears only once.
 #### Example:
 ```cpp
 vector<int> nums = {1, 1, 2, 3, 3, 4, 4, 8, 8};
-int single = singleNonDuplicajte(nums);
+int single = singleNonDuplicate(nums);
 // The single element will be 2
 ```
+
 ### `int countFreq(vector<int>& nums, int target)`
 
 This function counts the number of occurrences of a target value in a sorted array.
