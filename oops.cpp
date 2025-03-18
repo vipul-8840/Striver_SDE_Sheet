@@ -91,4 +91,40 @@ using namespace std ;
 //     cout<<res <<endl;
 // }
 
+class Complex {
+    private:
+    int real ;
+    int imag;
+    public:
+    Complex()
+    {
+        real =0;
+        imag = 0;
 
+    }
+   Complex (int r,int i)
+   {
+    real = r;
+    imag = i;
+   }
+   Complex operator+(Complex c)
+   {
+    Complex temp;
+    temp.real = real + c.real;
+    temp.imag = imag + c.imag;
+    return temp;
+   }
+   void print ()
+   {
+    cout<<real<<" + "<<imag <<"i"<<endl;
+   }
+};
+int main ()
+{
+    Complex c1(2,4);
+    Complex c2(5,6);
+    Complex c3;
+    c3 = c1+c2;
+    c3.print();
+    return 0;
+}
