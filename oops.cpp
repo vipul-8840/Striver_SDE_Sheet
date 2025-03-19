@@ -128,3 +128,13 @@ int main ()
     c3.print();
     return 0;
 }
+
+// nth highest salary 
+
+select salary from worker  order by salary desc limit n-1,1;
+select distinct salary from worker w1 where n>= (select count(distinct salary)from worker w2 where w2>=w1);
+
+select salary from worker w1 where 3>= (select count(distinct salary) from worker w2 where w2>=w1);
+
+select * from wokrer order by worker _id desc limit 5;
+select * frome left table,right table where left.id = right.id;
