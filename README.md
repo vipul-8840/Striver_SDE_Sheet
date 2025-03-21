@@ -3,6 +3,8 @@
 This project contains C++ implementations of various algorithms.
 
 ## File Descriptions
+- `sorting/BubbleSort.cpp`: Contains the implementation of the `bubbleSort` function which sorts an array using the Bubble Sort algorithm.
+- `sorting/selectionSort.cpp`: Contains the implementation of the `selectionSort` function which sorts an array using the Selection Sort algorithm.
 - `setMatrixZeroes.cpp`: Contains the implementation of the `setZeroes` function which sets the matrix zeroes.
 - `PascalTriangle.cpp`: Contains the implementation of functions to generate Pascal's Triangle.
 - `Kadanes.cpp`: Contains the implementation of the `maxSubArray` function which finds the maximum sum of a contiguous subarray.
@@ -88,6 +90,7 @@ This project contains C++ implementations of various algorithms.
 - `BinarySearch/Koko.cpp`: Contains the implementation of the `minEatingSpeed` function which finds the minimum eating speed to finish eating all bananas within h hours.
 
 ## Function Descriptions
+
 ### `void setZeroes(vector<vector<int>>& mat)`
 
 This function takes a 2D vector `mat` as input and sets the entire row and column to 0 if an element is 0.
@@ -772,4 +775,32 @@ vector<int> nums = {5, 7, 7, 8, 8, 10};
 int target = 8;
 int count = countFreq(nums, target);
 // The count will be 2
+```
+
+### `void bubbleSort(vector<int>& arr)`
+
+This function sorts an array using the Bubble Sort algorithm.
+
+#### Parameters:
+- `arr`: A reference to a vector of integers representing the array to be sorted.
+
+#### Example:
+```cpp
+vector<int> arr = {5, 3, 8, 6, 2};
+bubbleSort(arr);
+// The sorted array will be: {2, 3, 5, 6, 8}
+```
+
+### `void selectionSort(vector<int>& arr)`
+
+This function sorts an array using the Selection Sort algorithm.
+
+#### Parameters:
+- `arr`: A reference to a vector of integers representing the array to be sorted.
+
+#### Example:
+```cpp
+vector<int> arr = {29, 10, 14, 37, 13};
+selectionSort(arr);
+// The sorted array will be: {10, 13, 14, 29, 37}
 ```
