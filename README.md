@@ -5,6 +5,9 @@ This project contains C++ implementations of various algorithms.
 ## File Descriptions
 - `sorting/BubbleSort.cpp`: Contains the implementation of the `bubbleSort` function which sorts an array using the Bubble Sort algorithm.
 - `sorting/selectionSort.cpp`: Contains the implementation of the `selectionSort` function which sorts an array using the Selection Sort algorithm.
+- `sorting/MergeSort.cpp`: Contains the implementation of the `mergeSort` function which sorts an array using the Merge Sort algorithm.
+- `sorting/insertionSort.cpp`: Contains the implementation of the `insertionSort` function which sorts an array using the Insertion Sort algorithm.
+- `sorting/quickSort.cpp`: Contains the implementation of the `quickSort` function which sorts an array using the Quick Sort algorithm.
 - `setMatrixZeroes.cpp`: Contains the implementation of the `setZeroes` function which sets the matrix zeroes.
 - `PascalTriangle.cpp`: Contains the implementation of functions to generate Pascal's Triangle.
 - `Kadanes.cpp`: Contains the implementation of the `maxSubArray` function which finds the maximum sum of a contiguous subarray.
@@ -803,4 +806,50 @@ This function sorts an array using the Selection Sort algorithm.
 vector<int> arr = {29, 10, 14, 37, 13};
 selectionSort(arr);
 // The sorted array will be: {10, 13, 14, 29, 37}
+```
+
+### `void mergeSort(vector<int>& arr, int l, int r)`
+
+This function sorts an array using the Merge Sort algorithm.
+
+#### Parameters:
+- `arr`: A reference to a vector of integers representing the array to be sorted.
+- `l`: The starting index of the array.
+- `r`: The ending index of the array.
+
+#### Example:
+```cpp
+vector<int> arr = {12, 11, 13, 5, 6, 7};
+mergeSort(arr, 0, arr.size() - 1);
+// The sorted array will be: {5, 6, 7, 11, 12, 13}
+```
+
+### `void insertionSort(vector<int>& arr)`
+
+This function sorts an array using the Insertion Sort algorithm.
+
+#### Parameters:
+- `arr`: A reference to a vector of integers representing the array to be sorted.
+
+#### Example:
+```cpp
+vector<int> arr = {12, 11, 13, 5, 6};
+insertionSort(arr);
+// The sorted array will be: {5, 6, 11, 12, 13}
+```
+
+### `void quickSort(vector<int>& arr, int low, int high)`
+
+This function sorts an array using the Quick Sort algorithm.
+
+#### Parameters:
+- `arr`: A reference to a vector of integers representing the array to be sorted.
+- `low`: The starting index of the array.
+- `high`: The ending index of the array.
+
+#### Example:
+```cpp
+vector<int> arr = {10, 7, 8, 9, 1, 5};
+quickSort(arr, 0, arr.size() - 1);
+// The sorted array will be: {1, 5, 7, 8, 9, 10}
 ```
