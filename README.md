@@ -8,6 +8,8 @@ This project contains C++ implementations of various algorithms.
 - `sorting/MergeSort.cpp`: Contains the implementation of the `mergeSort` function which sorts an array using the Merge Sort algorithm.
 - `sorting/insertionSort.cpp`: Contains the implementation of the `insertionSort` function which sorts an array using the Insertion Sort algorithm.
 - `sorting/quickSort.cpp`: Contains the implementation of the `quickSort` function which sorts an array using the Quick Sort algorithm.
+- `BinarySearch/aggressiveCow.cpp`: Contains the implementation of the `aggressiveCows` function which solves the Aggressive Cows problem using binary search.
+- `BinarySearch/AllocatedPages.cpp`: Contains the implementation of the `findPages` function which solves the Book Allocation problem using binary search.
 - `setMatrixZeroes.cpp`: Contains the implementation of the `setZeroes` function which sets the matrix zeroes.
 - `PascalTriangle.cpp`: Contains the implementation of functions to generate Pascal's Triangle.
 - `Kadanes.cpp`: Contains the implementation of the `maxSubArray` function which finds the maximum sum of a contiguous subarray.
@@ -852,4 +854,36 @@ This function sorts an array using the Quick Sort algorithm.
 vector<int> arr = {10, 7, 8, 9, 1, 5};
 quickSort(arr, 0, arr.size() - 1);
 // The sorted array will be: {1, 5, 7, 8, 9, 10}
+```
+
+### `int aggressiveCows(vector<int>& stalls, int k)`
+
+This function solves the Aggressive Cows problem using binary search.
+
+#### Parameters:
+- `stalls`: A reference to a vector of integers representing the positions of stalls.
+- `k`: An integer representing the number of cows.
+
+#### Example:
+```cpp
+vector<int> stalls = {1, 2, 4, 8, 9};
+int k = 3;
+int maxDistance = aggressiveCows(stalls, k);
+// The maximum minimum distance will be 4
+```
+
+### `int findPages(vector<int>& arr, int k)`
+
+This function solves the Book Allocation problem using binary search.
+
+#### Parameters:
+- `arr`: A reference to a vector of integers representing the number of pages in each book.
+- `k`: An integer representing the number of students.
+
+#### Example:
+```cpp
+vector<int> arr = {12, 34, 67, 90};
+int k = 2;
+int minPages = findPages(arr, k);
+// The minimum number of pages will be 113
 ```
