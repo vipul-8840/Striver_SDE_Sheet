@@ -65,3 +65,46 @@ double findSmallestMaxDist(vector<int> &stations, int k) {
 
     return result;
 }
+
+
+//bianry search method O(klogn)
+int checkPossible(vector<int> &stations, long double mid)
+{
+    int count= 0;
+     for(int i=1;i<stations.size();i++)
+     {
+         int num = (stations[i]-stations[i-1])/mid;
+         if((stations[i]-stations[i-1])*num==stations[i])
+         {
+             num--;
+         }
+         count+=num;
+     }
+     return count;
+}
+double findSmallestMaxDist(vector<int> &stations, int k) {
+    // Code here
+   long double low = 0;
+    long double high = 0;
+    for(int i=1;i<stations.size();i++)
+    {
+        high = max(high,(long double)(stations[i]-stations[i-1]));
+    }
+    long double diff = 1e-6 ;
+    while((high-low)>diff)
+    {
+        long double mid = (low+high)/2.0;
+        int count = checkPossible(stations,mid);
+        if(count>k)
+        {
+            low= mid;
+        }
+        else{
+          
+            high = mid;
+        }
+        
+        
+    }
+    return high;
+}
