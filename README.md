@@ -10,6 +10,10 @@ This project contains C++ implementations of various algorithms.
 - `sorting/quickSort.cpp`: Contains the implementation of the `quickSort` function which sorts an array using the Quick Sort algorithm.
 - `BinarySearch/aggressiveCow.cpp`: Contains the implementation of the `aggressiveCows` function which solves the Aggressive Cows problem using binary search.
 - `BinarySearch/AllocatedPages.cpp`: Contains the implementation of the `findPages` function which solves the Book Allocation problem using binary search.
+- `BinarySearch/Painter.cpp`: Contains the implementation of the `minTime` function which solves the Painter's Partition problem using binary search.
+- `BinarySearch/matMedian.cpp`: Contains the implementation of the `median` function which finds the median of a matrix.
+- `Recursion/Increasing.cpp`: Contains the implementation of the `printNos` function which prints numbers from 1 to N using recursion.
+- `Recursion/printGfg.cpp`: Contains the implementation of the `printGfg` function which prints "GFG" N times using recursion.
 - `setMatrixZeroes.cpp`: Contains the implementation of the `setZeroes` function which sets the matrix zeroes.
 - `PascalTriangle.cpp`: Contains the implementation of functions to generate Pascal's Triangle.
 - `Kadanes.cpp`: Contains the implementation of the `maxSubArray` function which finds the maximum sum of a contiguous subarray.
@@ -886,4 +890,66 @@ vector<int> arr = {12, 34, 67, 90};
 int k = 2;
 int minPages = findPages(arr, k);
 // The minimum number of pages will be 113
+```
+
+### `void printNos(int n)`
+
+This function prints numbers from 1 to N using recursion.
+
+#### Parameters:
+- `n`: An integer representing the upper limit.
+
+#### Example:
+```cpp
+int n = 5;
+printNos(n);
+// Output: 1 2 3 4 5
+```
+
+### `void printGfg(int N)`
+
+This function prints "GFG" N times using recursion.
+
+#### Parameters:
+- `N`: An integer representing the number of times to print "GFG".
+
+#### Example:
+```cpp
+int N = 3;
+printGfg(N);
+// Output: GFG GFG GFG
+```
+
+### `int minTime(vector<int>& nums, int k)`
+
+This function solves the Painter's Partition problem using binary search.
+
+#### Parameters:
+- `nums`: A reference to a vector of integers representing the lengths of boards.
+- `k`: An integer representing the number of painters.
+
+#### Example:
+```cpp
+vector<int> nums = {10, 20, 30, 40};
+int k = 2;
+int result = minTime(nums, k);
+// The minimum time will be 60
+```
+
+### `int median(vector<vector<int>>& mat)`
+
+This function finds the median of a matrix.
+
+#### Parameters:
+- `mat`: A reference to a 2D vector of integers representing the matrix.
+
+#### Example:
+```cpp
+vector<vector<int>> mat = {
+    {1, 3, 5},
+    {2, 6, 9},
+    {3, 6, 9}
+};
+int result = median(mat);
+// The median will be 5
 ```
