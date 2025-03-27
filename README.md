@@ -1,11 +1,11 @@
 # SDE SHEET
 
 This project contains C++ implementations of various algorithms.
+
 ## File Descriptions
 
 - `setMatrixZeroes.cpp`: Contains the implementation of the `setZeroes` function which sets the matrix zeroes.
 - `PascalTriangle.cpp`: Contains the implementation of functions to generate Pascal's Triangle.
-
 ## Compilation and Execution
 
 To compile and run the programs, follow these steps:
