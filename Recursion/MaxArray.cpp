@@ -4,7 +4,8 @@ int maxArray(vector<int>&arr,int maxi,int index)
 {
     if(index==arr.size())
      return maxi;
-     return maxArray(arr,maxi,index+1);
+     maxi = max(arr[index],maxi);
+     return maxArray(arr,maxi,index+1);5
 }
 
 int main ()
