@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-ivoid sorted(stack<int>&s,int num)
+void sorted(stack<int>&s,int num)
 {
     if(s.empty() || num>s.top())
     {
