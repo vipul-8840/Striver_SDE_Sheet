@@ -63,3 +63,35 @@ using namespace std ;
 // }
 
 
+int main ()
+{
+    int n ;
+    cout<<"Enter the size of the array : ";
+    cin>>n;
+    vector<int>arr(n);
+    cout<<"Enter the element in array : ";
+    int pre1=0;
+    int pre2=0;
+
+    for(int i=0;i<n;i++)
+    { 
+                cin>>arr[i];
+    }
+    for(int i=1;i<n;i++)
+    {
+        int first = pre1 + abs(arr[i]-arr[i-1]);
+         int second = INT_MAX ;
+        if(i>1)
+         second= pre2+abs(arr[i]-arr[i-2]);
+
+      int curr  = min(first,second);
+      pre2 = pre1;
+      pre1 = curr;
+
+
+
+    }
+    cout<<"minium energy required to reach last index : "<<pre1;
+
+    
+}
