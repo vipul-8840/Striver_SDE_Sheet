@@ -1,6 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
-
+//recursive way  
 void find(vector<int>& arr,int index,vector<vector<int>>&ans,vector<int>&res,int target)
 {
     if(index==arr.size())
