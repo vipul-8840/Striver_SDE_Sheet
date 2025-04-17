@@ -1,6 +1,6 @@
 
 #include<bits/stdc++.h>
-using namepspace std;
+using namespace std;
 class Solution {
     public:
     int rows[4] = {0,0,1,-1};
