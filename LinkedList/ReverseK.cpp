@@ -43,3 +43,37 @@ using namespace std;
 //      return newHead->next;
 // }
 
+ListNode* reverseKGroup(ListNode* head, int k) {
+        
+        
+    if(head==nullptr || k==1 || head->next==nullptr)
+     return head;
+ 
+ int c=0;
+ ListNode* last=head;
+ 
+ while(last!=nullptr)  //to count nodes
+ {
+     last=last->next;
+     c++;
+ }
+ 
+ if(k<=c)
+ {
+     ListNode *prev=nullptr,*curr=head,*nxt=nullptr;
+     int count=0;
+
+     while(curr!=nullptr && count<k )
+     {
+         nxt=curr->next;
+         curr->next=prev;
+         prev=curr;
+         curr=nxt;
+         count++;
+     }
+
+     if(nxt!=nullptr)
+         head->next=reverseKGroup(nxt,k);
+
+     return prev;
+ }
