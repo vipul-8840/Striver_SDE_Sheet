@@ -3,7 +3,7 @@ using namespace std;
 class ListNode {
     public:
     int k ;
-    int next;
+    ListNode* next;
     ListNode (int k)
     {
         this->k = k;
@@ -20,7 +20,7 @@ ListNode* rotateRight(ListNode* head, int k) {
     {
          n++;
         pre = curr ;
-        curr= curr->next;
+        curr=curr->next;
     }
     k = k%n;
     if(k==0)
@@ -31,7 +31,7 @@ ListNode* rotateRight(ListNode* head, int k) {
     while(count<(rem-1))
     {
         count++;
-        curr = curr->next;
+        curr=curr->next;
     }
     ListNode* newHead = curr->next;
     curr->next = NULL;
