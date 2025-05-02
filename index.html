@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Campus Food Truck Fridays</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background-color: #f5f5f5;
+    }
+    h2 {
+      text-align: center;
+      color: #333;
+    }
+    form {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      max-width: 800px;
+      margin: 0 auto;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    .section-title {
+      font-size: 20px;
+      margin-bottom: 10px;
+      text-align: center;
+      font-weight: bold;
+    }
+    .divider {
+      height: 3px;
+      background-color: brown;
+      margin: 10px 0 20px 0;
+    }
+    label {
+      display: block;
+      margin: 10px 0 5px;
+    }
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    select,
+    textarea {
+      width: 100%;
+      padding: 8px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+    .inline-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin-top: 10px;
+    }
+    .inline-group label {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      margin: 0;
+    }
+    textarea {
+      resize: vertical;
+    }
+    .buttons {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 20px;
+    }
+    button {
+      padding: 10px 20px;
+      background-color: #4285f4;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button[type="reset"] {
+      background-color: #888;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Campus Food Truck Fridays</h2>
+  <form>
+    <!-- Customer Information Section -->
+    <div class="section-title">Customer Information</div>
+    <div class="divider"></div>
+    
+    <label for="name">Student Name *</label>
+    <input type="text" id="name" name="name" required>
+
+    <label for="studentNumber">Student Number *</label>
+    <input type="text" id="studentNumber" name="studentNumber" required>
+
+    <label for="contact">Contact Number *</label>
+    <input type="tel" id="contact" name="contact" required>
+
+    <label for="whatsapp">WhatsApp Number(Optional) *</label>
+    <input type="tel" id="whatsapp" name="whatsapp" >
+
+    <label for="email">Email *</label>
+    <input type="email" id="email" name="email" required>
+
+    <!-- Order Selection Section -->
+    <div class="section-title">Order Selection</div>
+    <div class="divider"></div>
+
+    <label for="foodTruck">Select Food Truck</label>
+    <select id="foodTruck" name="foodTruck" required>
+      <option value="">Choose a Food Truck</option>
+      <option value="burger">Burger Beast</option>
+      <option value="pizza">Pizza Paradise</option>
+      <option value="mexican">Mexican Fiesta</option>
+      <option value="wings">Wing World</option>
+      <option value="vegan">Vegan Delights</option>
+    </select>
+
+    <!-- Portion Size and Toppings in Same Line -->
+     <div>
+        <label style="display: block; margin-bottom: 5px;">Portion Size</label>
+     </div>
+   
+    <div class="inline-group">
+
+      <label><input type="radio" name="portion" value="small" required> Small</label>
+      <label><input type="radio" name="portion" value="medium"> Medium</label>
+      <label><input type="radio" name="portion" value="large"> Large</label>
+    </div>
+     <div>
+        <label style="display: block; margin-bottom: 5px;">Extra Toppings/Sauces</label>
+     </div>
+    
+    <div class="inline-group">
+    <label><input type="checkbox" name="toppings" value="cheese"> Extra Cheese</label>
+    <label><input type="checkbox" name="toppings" value="sauce"> Special Sauce</label>
+    <label><input type="checkbox" name="toppings" value="spicy"> Make it Spicy</label>
+    </div>
+
+    <label for="instructions">Special Instructions</label>
+    <textarea id="instructions" name="instructions" rows="3"></textarea>
+
+    <!-- Order Details Section -->
+    <div class="section-title">Order Details</div>
+    <div class="divider"></div>
+
+    <label for="pickup">Pickup Time</label>
+    <select id="pickup" name="pickup" required>
+      <option value="">Select Time</option>
+      <option value="11">11:00</option>
+      <option value="12">12:00</option>
+      <option value="13">13:00</option>
+      <option value="14">14:00</option>
+    </select>
+
+    <label for="payment">Payment Method</label>
+    <select id="payment" name="payment" required>
+      <option value="">Select Payment Method</option>
+      <option value="card">Card</option>
+      <option value="cash">Cash</option>
+      <option value="upi">UPI</option>
+    </select>
+
+    <label for="notify">Order Notification Preference</label>
+    <select id="notify" name="notify" required>
+      <option value="">Select Notification Method</option>
+      <option value="email">Email</option>
+      <option value="sms">SMS</option>
+      <option value="whatsapp">WhatsApp</option>
+    </select>
+
+    <label>
+      <input type="checkbox" required> I agree to the terms and conditions
+    </label>
+
+    <div class="buttons">
+      <button type="submit">Submit</button>
+      <button type="reset">Reset</button>
+    </div>
+  </form>
+</body>
+</html>
