@@ -19,7 +19,7 @@ string postToPre(string s) {
             st.pop();
             string t2 = st.top();
             st.pop();
-            st.push(op+t1+t2);
+            st.push(op+t2+t1);
         }
     }
     return st.top();
