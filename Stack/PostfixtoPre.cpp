@@ -4,6 +4,7 @@ using namespace std;
 string postToPre(string s) {
     // Write your code here
     stack<string>st;
+    int n = s.size();
     for(int i=0;i<n;i++)
     
     {
