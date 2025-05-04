@@ -97,5 +97,6 @@ int getMaxArea(vector<int> &arr) {
          res = max(res,(n-psl-1)*arr[index]);
          
      }
+     //final 
      return res;
 }
