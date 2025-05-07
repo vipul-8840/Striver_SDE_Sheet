@@ -1,6 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
-
+// O(n^2)
 // int subarraysWithKDistinct(vector<int>& nums, int k)
      
 // {
