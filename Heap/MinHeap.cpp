@@ -42,11 +42,11 @@ class MinHeap{
         int left = 2 * i +1;
         int right = 2*i +2;
 
-        if(left<size && arr[left]>arr[largest])
+        if(left<size && arr[left]<arr[largest])
         {
             largest = left;
         }
-        if(right<size && arr[right]>arr[largest])
+        if(right<size && arr[right]<arr[largest])
         {
             largest = right;
         }
@@ -66,6 +66,7 @@ class MinHeap{
         }
         cout<<arr[0]<<" deleted in the heap"<<endl;
         swap(arr[0],arr[size-1]);
+        size--;
         Heapify(0);
     }
     void print()
@@ -86,11 +87,11 @@ int main ()
     H.insert(15);
     H.insert(45);
     H.insert(90);
-    // H.deletes();
+    H.deletes();
     H.print();
     H.insert(80);
     H.insert(2);
-    // H.deletes();
+    H.deletes();
     H.print();
     H.insert(97);
     H.insert(1);
