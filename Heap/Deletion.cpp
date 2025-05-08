@@ -63,6 +63,7 @@ class MaxHeap{
         }
         cout<<arr[0]<<" deleted in the heap"<<endl;
         swap(arr[0],arr[size-1]);
+        size--;
         Heapify(0);
     }
     void print()
