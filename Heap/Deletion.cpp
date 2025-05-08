@@ -92,6 +92,7 @@ int main ()
     H.print();
     H.insert(97);
     H.insert(1);
+    H.insert(78);
     H.print();
     return 0;
 }
