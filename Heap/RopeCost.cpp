@@ -1,6 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
-
+// with help of  priorty_queue 
 int minCost(vector<int>& arr)
  {
         // code here
