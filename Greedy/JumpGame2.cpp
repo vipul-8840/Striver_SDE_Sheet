@@ -31,3 +31,24 @@ using namespace std;
 
 // optimize way 
 
+ int jump(vector<int>& nums)
+     {
+        int n = nums.size();
+        int jump =0;
+        int coverage = 0;
+        int jumpIndex = 0;
+        for(int i=0;i<n-1;i++)
+        {
+            coverage = max(coverage,i+nums[i]);
+            if(i==jumpIndex)
+            {
+                jumpIndex = coverage ;
+                jump++;
+                if(coverage>=n-1)
+                {
+                    return jump;
+                }
+            }
+        }
+        return jump;
+    }
