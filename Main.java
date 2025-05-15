@@ -74,31 +74,57 @@
 //     }
 // }
 import java.util.*;
-class Main{
-public ArrayList<Integer> bfs(ArrayList<ArrayList<Integer>> adj)
-    {
-        // code here
-        int n = adj.size();
-        ArrayList<Integer> ans = new ArrayList<>();
-        int vis[]=new int[n];
-        Queue<Integer> q = new LinkedList<>();
-        q.add(0);
-        vis[0]=1;
-        while(!q.isEmpty())
-        {
-            int node = q.poll();
-            ans.add(node);
+// class Main{
+// public ArrayList<Integer> bfs(ArrayList<ArrayList<Integer>> adj)
+//     {
+//         // code here
+//         int n = adj.size();
+//         ArrayList<Integer> ans = new ArrayList<>();
+//         int vis[]=new int[n];
+//         Queue<Integer> q = new LinkedList<>();
+//         q.add(0);
+//         vis[0]=1;
+//         while(!q.isEmpty())
+//         {
+//             int node = q.poll();
+//             ans.add(node);
             
-            for(int i=0;i<adj.get(node).size();i++)
+//             for(int i=0;i<adj.get(node).size();i++)
+//             {
+//                 int neighbour = adj.get(node).get(i);
+//                 if(vis[neighbour]!=1)
+//                 {
+//                    vis[neighbour]=1;
+//                    q.add(neighbour);
+//                 }
+//             }
+//         }
+//         return ans;
+//     }
+// }
+
+class Main{
+    void dfs(ArrayList<ArrayList<Integer>> adj,int node , int vis[], ArrayList<Integer> ans)
+    {
+        
+        ans.add(node);
+        vis[node]=1;
+        for(int i=0;i<adj.get(node).size();i++)
+        {
+            int neighbour = adj.get(node).get(i);
+            if(vis[neighbour]!=1)
             {
-                int neighbour = adj.get(node).get(i);
-                if(vis[neighbour]!=1)
-                {
-                   vis[neighbour]=1;
-                   q.add(neighbour);
-                }
+                dfs(adj,neighbour,vis,ans);
             }
         }
-        return ans;
+        return ;
+    }
+    public ArrayList<Integer> dfs(ArrayList<ArrayList<Integer>> adj) {
+        // Code here
+        int n = adj.size();
+       int vis []= new int[n];
+       ArrayList<Integer> ans = new ArrayList<>();
+         dfs(adj,0,vis,ans);
+         return ans;
     }
 }
