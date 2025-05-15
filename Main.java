@@ -36,40 +36,69 @@
 //     }
 // }
   
-import java.util.ArrayList;
-import java.util.Scanner ;
-import java.lang.Integer ;
+// import java.util.ArrayList;
+// import java.util.Scanner ;
+// import java.lang.Integer ;
 
-class Main
-{
-    public static void main(String args[])
+// class Main
+// {
+//     public static void main(String args[])
+//     {
+//         Scanner sc = new Scanner(System.in);
+//         ArrayList<ArrayList<Integer>> adj = new ArrayList<>();
+//           int n = sc.nextInt(); 
+//         int m = sc.nextInt();
+//         for(int i=0;i<n;i++)
+//         {
+//             adj.add(new ArrayList<>());
+//         }
+
+//         for(int i=0;i<m;i++)
+//         {
+//                int u = sc.nextInt(); // number of nodes
+//         int v = sc.nextInt();
+//              adj.get(u).add(v);
+//              adj.get(v).add(u);
+//         }
+//         System.out.println("Adjacency List:");
+//         for(int i=0;i<n;i++)
+//         {
+//              System.out.print(i + " -> ");
+//             for(int neighbor: adj.get(i))
+//             {
+//                  System.out.print(neighbor+" ");
+//             }
+//             System.out.println();
+//         }
+//         sc.close();
+//     }
+// }
+import java.util.*;
+class Main{
+public ArrayList<Integer> bfs(ArrayList<ArrayList<Integer>> adj)
     {
-        Scanner sc = new Scanner(System.in);
-        ArrayList<ArrayList<Integer>> adj = new ArrayList<>();
-          int n = sc.nextInt(); 
-        int m = sc.nextInt();
-        for(int i=0;i<n;i++)
+        // code here
+        int n = adj.size();
+        ArrayList<Integer> ans = new ArrayList<>();
+        int vis[]=new int[n];
+        Queue<Integer> q = new LinkedList<>();
+        q.add(0);
+        vis[0]=1;
+        while(!q.isEmpty())
         {
-            adj.add(new ArrayList<>());
-        }
-
-        for(int i=0;i<m;i++)
-        {
-               int u = sc.nextInt(); // number of nodes
-        int v = sc.nextInt();
-             adj.get(u).add(v);
-             adj.get(v).add(u);
-        }
-        System.out.println("Adjacency List:");
-        for(int i=0;i<n;i++)
-        {
-             System.out.print(i + " -> ");
-            for(int neighbor: adj.get(i))
+            int node = q.poll();
+            ans.add(node);
+            
+            for(int i=0;i<adj.get(node).size();i++)
             {
-                 System.out.print(neighbor+" ");
+                int neighbour = adj.get(node).get(i);
+                if(vis[neighbour]!=1)
+                {
+                   vis[neighbour]=1;
+                   q.add(neighbour);
+                }
             }
-            System.out.println();
         }
-        sc.close();
+        return ans;
     }
 }
