@@ -1,7 +1,10 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-
+// adjacent will not be same in color 
+// linear graph always bipartite 
+// cylcic graph with even no of node are always bipartite
+// odd no of nodes cyclic graph always not bipratite 
 
 class Solution {
 public:
