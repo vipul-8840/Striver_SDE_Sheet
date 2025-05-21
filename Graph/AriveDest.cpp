@@ -26,7 +26,7 @@ class Solution {
         while(!pq.empty())
         {
             int currNode = pq.top().second;
-          long long int time= pq.top().first;
+            long long int time= pq.top().first;
             pq.pop();
 
             for(int i=0;i<adj[currNode].size();i++)
