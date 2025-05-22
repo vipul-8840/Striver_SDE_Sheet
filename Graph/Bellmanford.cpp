@@ -1,6 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
-
+// its not applicabale negative weighted cycle
 vector<int> bellmanFord(int V, vector<vector<int>>& edges, int src) 
     {
         // Code here
