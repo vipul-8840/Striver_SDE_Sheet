@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-//longest prefix suffix
+//longest prefix suffix using kmp algo
  int longestPrefixSuffix(string &s) {
         // Your code goes here
         int n = s.size();
