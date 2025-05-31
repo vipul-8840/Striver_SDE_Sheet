@@ -31,7 +31,7 @@ void findLps(string s ,int m , vector<int> & lps)
         
         int n = s.size();
        string str = s;
-        reverse(str.begin(),str.end());
+    reverse(str.begin(),str.end());
       
       s+="#" + str;
       int m = s.size();
