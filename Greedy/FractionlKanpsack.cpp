@@ -1,12 +1,14 @@
 #include <bits/stdc++.h>
 using namespace std;
-
+// comp function  
  static bool cmp(pair<int,int> a,pair<int,int>b)
    {
        if((a.first * b.second) >= (a.second * b.first))
        return true ;
        return false ;
    }
+
+
     double fractionalKnapsack(vector<int>& val, vector<int>& wt, int w)
       {  
         // code here
