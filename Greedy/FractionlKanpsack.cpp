@@ -8,7 +8,7 @@ using namespace std;
        return false ;
    }
 
-
+  
     double fractionalKnapsack(vector<int>& val, vector<int>& wt, int w)
       {  
         // code here
