@@ -1,0 +1,25 @@
+#include<bits/stdc++.h>
+using namespace std ;
+
+int main ()
+{
+    // int a = 5;
+    // for(int i = 3;i>=0;i--)
+    // {
+    //     cout<<((a>>i) & 1)<<" ";
+    // }
+    for(char ptr='A';ptr<='Z';ptr++)
+    {
+        cout<< char(ptr | ' ')<<" ";
+    }
+    cout<<endl;
+    
+    for(char ptr ='a'; ptr<='z';ptr++)
+    {
+        cout<< char(ptr & '_')<<" ";
+    }
+    
+    
+
+    return 0;
+}
