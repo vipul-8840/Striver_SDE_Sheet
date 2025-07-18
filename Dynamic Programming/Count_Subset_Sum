@@ -1,0 +1,36 @@
+
+// top-down approach or recursive way to solve the problem 
+class Solution {
+  public:
+  
+     int countSub(vector<int>& arr, int target, vector<vector<int>>& dp,int index )
+     {
+         
+          if(index<0)
+            return target == 0 ? 1 : 0;
+          
+          if(dp[index][target]!=-1)
+          return dp[index][target];
+          
+          if(arr[index]<=target)
+          {
+             return  dp[index][target]=countSub(arr,target-arr[index],dp,index-1) + countSub(arr,target,dp,index-1);
+          }
+          
+          else
+          {
+            return  dp[index][target] = countSub(arr,target,dp,index-1);
+          }
+     }
+    int perfectSum(vector<int>& arr, int target)
+    {
+        // code here
+        int n = arr.size();
+        vector<vector<int>> dp(n+1,vector<int>(target+1,-1));
+        
+        return countSub(arr,target,dp,n-1);
+    }
+};
+
+
+// 
